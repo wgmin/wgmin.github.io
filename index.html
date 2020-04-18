@@ -48,7 +48,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="" class="profilepic">
-			<img src="/source/img/touxiang.jpg" class="js-avatar">
+			<img src="./source/touxiang.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="">wgmin</a></h1>
@@ -80,11 +80,11 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="/wgmin.github.io" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/wgmin" title="github"><i class="icon-github"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/min12030107" title="weixin"><i class="icon-weixin"></i></a>
 		        
-					<a class="jianshu" target="_blank" href="/" title="jianshu"><i class="icon-jianshu"></i></a>
+					<a class="jianshu" target="_blank" href="https://blog.csdn.net/xiaomin_er" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:wangmin1204@foxmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -104,7 +104,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="/source/img/touxiang.jpg" class="js-avatar">
+				<img src="./source/touxiang.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">wgmin</h1>
@@ -123,11 +123,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/wgmin.github.io" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/wgmin" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/min12030107" title="weixin"><i class="icon-weixin"></i></a>
 			        
-						<a class="jianshu" target="_blank" href="/" title="jianshu"><i class="icon-jianshu"></i></a>
+						<a class="jianshu" target="_blank" href="https://blog.csdn.net/xiaomin_er" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:wangmin1204@foxmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -156,6 +156,109 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-使用 nvm 安装 node,nmp,cnmp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/">使用 nvm 安装 node,nmp,cnmp</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/" class="archive-article-date">
+  	<time datetime="2020-04-18T14:47:02.531Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>安装过 nodejs 的，需要先把 nodejs 安装包删掉，把之前配置好的环境变量一起删去</p>
+</blockquote>
+<p><strong>1.nvm 下载</strong></p>
+<blockquote>
+<p><a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener">下载 nvm-setup.zip</a></p>
+</blockquote>
+<p><strong>2.安装 nvm</strong></p>
+<blockquote>
+<p>首先把 nvm-setup.zip 解压到 C:\Program Files(其他地方也可以)；</p>
+</blockquote>
+<blockquote>
+<p>选择 nvm 安装目录为 F:\apps\nvm，node 安装目录为 C:\Program Files\nodejs,</p>
+</blockquote>
+<blockquote>
+<p>找到 settings.txt,修改其里面的内容</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">path: C:\Program Files\nodejs     &#x2F;&#x2F;node的安装路径</span><br><span class="line">arch: 64</span><br><span class="line">proxy: none</span><br><span class="line">node_mirror: http:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.打开 cmd(windows+r)，输入命令 nvm,安装成功则如下显示。</strong></p>
+<p><strong>4.安装 nodejs</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nvm install 10.14.0    &#x2F;&#x2F; 下载指定版本</span><br><span class="line">nvm install latest     &#x2F;&#x2F;安装最新版本</span><br><span class="line">nvm use 10.14.0        &#x2F;&#x2F; 使用指定版本</span><br><span class="line">nvm ls                 &#x2F;&#x2F; 查看已经安装的nodejs版本</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.测试 node,npm 是否安装成功</strong></p>
+<blockquote>
+<p>node -v</p>
+</blockquote>
+<pre><code>npm -v    显示版本号</code></pre><p><strong>6.安装全局 npm</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1.  npm config set prefix &quot;F:\apps\nvm\npm&quot;     &#x2F;&#x2F;配置用npm下载包时全局安装的包路径</span><br><span class="line">2.  npm install npm -g --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  &#x2F;&#x2F;安装全局npm,不同的node都使用这个npm，想更新全局的npm的话首先删除全局路径(就是上一行命令的地址,可以使用npm config ls查看)下的npm,再执行一次这个命令即可</span><br></pre></td></tr></table></figure>
+
+<p><strong>7.安装 cnpm</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org &#x2F;&#x2F;使用淘宝镜像cnmp替代npm</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>安装完 cnpm 之后，输入 cnpm -v 得到以下结果，需要配置 cnpm 的环境变量</p>
+</blockquote>
+<p><strong>8.找到 cnpm 的下载地址，进行复制</strong></p>
+<blockquote>
+<p>双击此电脑 =》计算机 =》属性=》高级系统设置 =》环境变量=》系统变量=》在 path 中粘贴 cnpm 的路径</p>
+</blockquote>
+<p><strong>9.输入 cnpm -v，搞定</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -195,81 +298,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/04/18/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/18/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-18T09:29:07.316Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/18/hello-world/">展开全文 >></a>
         </p>
       
 
