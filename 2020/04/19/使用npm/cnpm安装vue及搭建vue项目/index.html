@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>gulp项目搭建 | wgmin的博客</title>
+  <title>使用npm/cnpm安装vue及搭建vue项目 | wgmin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="准备工作&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;nodejs,cnpm 安装  1.打开 cmd，切换到需要搭建 gulp 的目录下  2.对页面进行初始化，输入 cnpm init,一路敲回车，自动生成 package.json">
+  <meta name="description" content="1.查看是否安装 npm 或者 cnpm  2.安装 vue我这里为了快速下载，使用的是 cnpm install vue,也可以采用npm install vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gulp项目搭建">
-<meta property="og:url" content="http://yoursite.com/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:title" content="使用npm&#x2F;cnpm安装vue及搭建vue项目">
+<meta property="og:url" content="http://yoursite.com/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/index.html">
 <meta property="og:site_name" content="wgmin的博客">
-<meta property="og:description" content="准备工作&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;nodejs,cnpm 安装  1.打开 cmd，切换到需要搭建 gulp 的目录下  2.对页面进行初始化，输入 cnpm init,一路敲回车，自动生成 package.json">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330085011165.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200330085124565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331084706837.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331091039110.png">
-<meta property="article:published_time" content="2020-04-19T07:21:56.664Z">
-<meta property="article:modified_time" content="2020-04-19T16:34:23.527Z">
+<meta property="og:description" content="1.查看是否安装 npm 或者 cnpm  2.安装 vue我这里为了快速下载，使用的是 cnpm install vue,也可以采用npm install vue">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331224352984.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331225044994.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331230918408.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331233733321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200331234905777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-04-19T15:33:24.818Z">
+<meta property="article:modified_time" content="2020-04-19T16:34:01.183Z">
 <meta property="article:author" content="wgmin">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -28,7 +29,7 @@
 <meta property="article:tag" content="html5">
 <meta property="article:tag" content="c">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200330085011165.png">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200331224352984.png">
   
     <link rel="alternative" href="/atom.xml" title="wgmin的博客" type="application/atom+xml">
   
@@ -164,66 +165,50 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-gulp项目搭建" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用npm/cnpm安装vue及搭建vue项目" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      gulp项目搭建
+      使用npm/cnpm安装vue及搭建vue项目
     </h1>
   
 
         
-        <a href="/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-04-19T07:21:56.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
+        <a href="/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
+  	<time datetime="2020-04-19T15:33:24.818Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote>
-<p>准备工作&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wgmin.github.io/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/" target="_blank" rel="noopener">nodejs,cnpm 安装</a></p>
-</blockquote>
-<p><strong>1.打开 cmd，切换到需要搭建 gulp 的目录下</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200330085011165.png" alt=""></p>
-<p><strong>2.对页面进行初始化，输入 cnpm init,一路敲回车，自动生成 package.json</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200330085124565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70" alt=""></p>
+        <p><strong>1.查看是否安装 npm 或者 cnpm</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200331224352984.png" alt=""></p>
+<p><strong>2.安装 vue</strong><br>我这里为了快速下载，使用的是 <font color=#0099ff>cnpm install vue</font>,也可以采用<font color=#0099ff>npm install vue</font><br><img src="https://img-blog.csdnimg.cn/20200331225044994.png" alt=""></p>
 <a id="more"></a>
 
-<p><strong>3.下载安装 gulp</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install gulp@3.9.1  --save-dev</span><br></pre></td></tr></table></figure>
+<p><strong>3.安装 vue-cli</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --global vue-cli</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>–save 将这个文件，安装到本地的当前文件夹</li>
-<li>-dev 将安装 gulp 的信息保存在 package.json 里面</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200331084706837.png" alt=""></p>
-<p>打开 package.json，会出现 gulp 版本号等其他信息</p>
-<p><strong>4.全局安装 gulp</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp -g</span><br></pre></td></tr></table></figure>
+<p><strong>4.测试 vue 是否安装成功<font color=#0099ff>vue -V</font> 注意后面的 V 是大写</strong></p>
+<p><strong>5.安装 webpack</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --global webpack</span><br><span class="line">cnpm install --global webpack-cli</span><br></pre></td></tr></table></figure>
 
-<p>gulp -v 检查是否安装成功</p>
-<p><strong>5.要使用 gulp 去处理文件,需要在项目根目录下手动创建一个 gulpfile.js 的文件</strong></p>
-<p><strong>6.安装第三方插件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i 插件名字 -D</span><br></pre></td></tr></table></figure>
+<p><strong>6.安装完成，输入<font color=#0099ff> webpack -v</font> 查看是否安装成功</strong><br><img src="https://img-blog.csdnimg.cn/20200331230918408.png" alt=""></p>
+<p><strong>7.新建一个 vue 项目</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack “项目名称”</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<ul>
-<li>启动服务器的插件 gulp-connect</li>
-<li>重命名插件 gulp-rename</li>
-<li>scss 插件 gulp-scss</li>
-<li><a href="https://gulpjs.com/plugins/" target="_blank" rel="noopener">更多插件</a></li>
-</ul>
-</blockquote>
-<p><strong>7.我们可以在 gulpfile.js 文件中添加要执行的任务。写入以下代码：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span><br><span class="line"></span><br><span class="line">gulp.task(&#39;default&#39;, function() &#123;</span><br><span class="line">    console.log(&#39;终于完成了~&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>我这里在 f 盘创建一个 myproject 项目 <font color=#0099ff> vue init webpack myproject</font></p>
+<p><strong>8.初始化一个 vue 项目</strong><br>填写所需信息后，回车执行，一段时间安装完模块后初始化完成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">? Project name vue-start &#x2F;&#x2F;项目名称</span><br><span class="line">? Project description A Vue.js project &#x2F;&#x2F; 项目描述</span><br><span class="line">? Author  &#x2F;&#x2F; 作者名称</span><br><span class="line">? Vue build standalone &#x2F;&#x2F; 推荐选前者</span><br><span class="line"></span><br><span class="line">? Install vue-router?</span><br><span class="line">&#x2F;&#x2F; 是否安装vue-router路由组件，也可不安装使用第三方或简单的项目自己写</span><br><span class="line"></span><br><span class="line">? Use ESLint to lint your code?</span><br><span class="line">&#x2F;&#x2F; 是否使用eslint管理代码，个人项目不推荐</span><br><span class="line"></span><br><span class="line">? Set up unti tests?</span><br><span class="line">&#x2F;&#x2F; 是否使用karma来做单元测试</span><br><span class="line"></span><br><span class="line">? Setup e2e tests with Nightwatch?</span><br><span class="line">&#x2F;&#x2F; 是否安装e2e测试</span><br><span class="line"></span><br><span class="line">? Should we run &#39;npm install&#39; for you after the project has been created?</span><br><span class="line">&#x2F;&#x2F; 选择使用npm或yarn进行安装模块</span><br></pre></td></tr></table></figure>
 
-<p><strong>8.在 cmd 中执行 gulp</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200331091039110.png" alt=""></p>
-<p>gulp 的运行环境就搭建完成</p>
+<p><img src="https://img-blog.csdnimg.cn/20200331233733321.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70" alt=""></p>
+<p><strong>9.运行项目</strong><br>进入项目目录里面，运行<font color=#0099ff> cnpm run dev</font><br>默认监听 8080 端口，服务器己经启动，目前是在开发环境下。<br><img src="https://img-blog.csdnimg.cn/20200331234905777.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70" alt=""></p>
+<p><strong>目录结构</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">build -- 大部分是webpack的配置文件</span><br><span class="line">config -- 配置文件，比如配置监听端口</span><br><span class="line">node_modules -- 依赖包都在这里</span><br><span class="line">src -- 主工程文件夹，基本上所有的开发都在这个文件夹进行</span><br><span class="line">static -- 静态文件目录</span><br><span class="line">package.json -- 项目的一些配置信息</span><br></pre></td></tr></table></figure>
 
       
 
@@ -313,7 +298,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -327,18 +312,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          使用npm/cnpm安装vue及搭建vue项目
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用 nvm 安装 node,nmp,cnmp</div>
+    <a href="/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gulp项目搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   

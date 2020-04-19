@@ -157,6 +157,73 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-使用npm/cnpm安装vue及搭建vue项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">使用npm/cnpm安装vue及搭建vue项目</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
+  	<time datetime="2020-04-19T15:33:24.818Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1.查看是否安装 npm 或者 cnpm</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200331224352984.png" alt=""></p>
+<p><strong>2.安装 vue</strong><br>我这里为了快速下载，使用的是 <font color=#0099ff>cnpm install vue</font>,也可以采用<font color=#0099ff>npm install vue</font><br><img src="https://img-blog.csdnimg.cn/20200331225044994.png" alt=""></p>
+        
+          <a class="article-more-a" href="/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/19/%E4%BD%BF%E7%94%A8npm/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-gulp项目搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -184,38 +251,9 @@
 <p><img src="https://img-blog.csdnimg.cn/20200330085011165.png" alt=""></p>
 <p><strong>2.对页面进行初始化，输入 cnpm init,一路敲回车，自动生成 package.json</strong></p>
 <p><img src="https://img-blog.csdnimg.cn/20200330085124565.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70" alt=""></p>
-<p><strong>3.下载安装 gulp</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install gulp@3.9.1  --save-dev</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>–save 将这个文件，安装到本地的当前文件夹</li>
-<li>-dev 将安装 gulp 的信息保存在 package.json 里面</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200331084706837.png" alt=""></p>
-<p>打开 package.json，会出现 gulp 版本号等其他信息</p>
-<p><strong>4.全局安装 gulp</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp -g</span><br></pre></td></tr></table></figure>
-
-<p>gulp -v 检查是否安装成功</p>
-<p><strong>5.要使用 gulp 去处理文件,需要在项目根目录下手动创建一个 gulpfile.js 的文件</strong></p>
-<p><strong>6.安装第三方插件</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm i 插件名字 -D</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<ul>
-<li>启动服务器的插件 gulp-connect</li>
-<li>重命名插件 gulp-rename</li>
-<li>scss 插件 gulp-scss</li>
-<li><a href="https://gulpjs.com/plugins/" target="_blank" rel="noopener">更多插件</a></li>
-</ul>
-</blockquote>
-<p><strong>7.我们可以在 gulpfile.js 文件中添加要执行的任务。写入以下代码：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var gulp &#x3D; require(&#39;gulp&#39;);</span><br><span class="line"></span><br><span class="line">gulp.task(&#39;default&#39;, function() &#123;</span><br><span class="line">    console.log(&#39;终于完成了~&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p><strong>8.在 cmd 中执行 gulp</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200331091039110.png" alt=""></p>
-<p>gulp 的运行环境就搭建完成</p>
-
+        
+          <a class="article-more-a" href="/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/#more">more >></a>
+        
       
 
       
@@ -285,32 +323,10 @@
 <ul>
 <li>首先把 nvm-setup.zip 解压到 C:\Program Files(其他地方也可以)；</li>
 <li>选择 nvm 安装目录为&nbsp; F:\apps\nvm，node 安装目录 &nbsp;C:\Program Files\nodejs,</li>
-<li>找到 settings.txt,修改其里面的内容,root 和 path 不需要更改，系统会自动生成对应的 nvm,node 的安装路径</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root: F:\apps\nvm           &#x2F;&#x2F;nvm安装路径</span><br><span class="line">path: C:\Program Files\nodejs    &#x2F;&#x2F;node的安装路径</span><br><span class="line">arch: 64</span><br><span class="line">proxy: none</span><br><span class="line">node_mirror: http:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.打开 cmd(windows+r)，输入命令 nvm,安装成功则如下显示。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200329230639834.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70" alt=""></p>
-<p><strong>4.安装 nodejs</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nvm install 10.14.0    &#x2F;&#x2F; 下载指定版本</span><br><span class="line">nvm install latest     &#x2F;&#x2F;安装最新版本</span><br><span class="line">nvm use 10.14.0        &#x2F;&#x2F; 使用指定版本</span><br><span class="line">nvm ls                 &#x2F;&#x2F; 查看已经安装的nodejs版本</span><br></pre></td></tr></table></figure>
-
-<p><strong>5.测试 node,npm 是否安装成功</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://img-blog.csdnimg.cn/20200329232401629.png" alt=""></p>
-<p><strong>6.安装全局 npm</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;F:\apps\nvm\npm&quot;     &#x2F;&#x2F;配置用npm下载包时全局安装的包路径</span><br><span class="line">npm install npm -g --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org  &#x2F;&#x2F;安装全局npm,不同的node都使用这个npm，</span><br></pre></td></tr></table></figure>
-
-<p><strong>7.安装 cnpm</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org   &#x2F;&#x2F;使用淘宝镜像cnmp替代npm</span><br></pre></td></tr></table></figure>
-
-<p>安装完 cnpm 之后，需要配置 cnpm 的环境变量</p>
-<p><strong>8.找到 cnpm 的下载地址，进行复制</strong></p>
-<p>双击此电脑 =》计算机 =》属性=》高级系统设置 =》环境变量=》系统变量=》在 path 中粘贴 cnpm 的路径</p>
-<p><img src="https://img-blog.csdnimg.cn/20200329233519137.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9taW5fZXI=,size_16,color_FFFFFF,t_70" alt=""></p>
-<p><strong>9.输入 cnpm -v，搞定</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200329234303393.png" alt=""></p>
-
+<li>找到 settings.txt,修改其里面的内容,root 和 path 不需要更改，系统会自动生成对应的 nvm,node 的安装路径
+        
+          <a class="article-more-a" href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/#more">more >></a>
+        
       
 
       
