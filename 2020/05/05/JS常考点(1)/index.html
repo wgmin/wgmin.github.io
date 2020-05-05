@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | wgmin的博客</title>
+  <title>JS常考点(1) | wgmin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wgmin的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="1.数据类型基本数据类型：数字、布尔值、字符串、undefined、null、 SymbolSymbol这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。引用类型：object、function、 Array、Date、RegExp 2.let，const，var区别ES5 中作用域有：全局作用域、函数作用域。没有块作用域的概念。ES6 中新增了块级作用域。块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS常考点(1)">
+<meta property="og:url" content="http://yoursite.com/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/index.html">
 <meta property="og:site_name" content="wgmin的博客">
+<meta property="og:description" content="1.数据类型基本数据类型：数字、布尔值、字符串、undefined、null、 SymbolSymbol这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。引用类型：object、function、 Array、Date、RegExp 2.let，const，var区别ES5 中作用域有：全局作用域、函数作用域。没有块作用域的概念。ES6 中新增了块级作用域。块">
+<meta property="article:published_time" content="2020-05-05T15:33:44.728Z">
+<meta property="article:modified_time" content="2020-05-05T16:01:01.728Z">
 <meta property="article:author" content="wgmin">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -155,184 +159,230 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JS常考点(1)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JS常考点(1)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" class="archive-article-date">
+
+        
+        <a href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" class="archive-article-date">
   	<time datetime="2020-05-05T15:33:44.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/">JS常考点(1)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1.数据类型"></a><font color=red>1.数据类型</font></h3><p><strong>基本数据类型</strong>：<font color=#0099ff>数字、布尔值、字符串、undefined、null、 Symbol</font><br>Symbol这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。<br><strong>引用类型</strong>：<font color=#0099ff>object、function、 Array、Date、RegExp</font></p>
+<h3 id="2-let，const，var区别"><a href="#2-let，const，var区别" class="headerlink" title="2.let，const，var区别"></a><font color=red>2.let，const，var区别</font></h3><p>ES5 中作用域有：<font color=#0099ff>全局作用域、函数作用域。</font>没有块作用域的概念。ES6 中新增了<font color=#0099ff>块级作用域</font>。块作用域由 { } 包括，if语句和 for语句里面的{ }也属于块作用域。<br>三者都是用来声明变量的</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<ul>
+<li>var定义的变量，没有块的概念，可以<font color=#0099ff>跨块访问</font>, 不能跨函数访问。 </li>
+<li>let定义的变量，只能在块作用域里访问，<font color=#0099ff>不能跨块</font>访问，也不能跨函数访问。</li>
+<li>const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且<font color=#0099ff>不能修改</font>。</li>
+</ul>
+<h3 id="3-get和post请求区别"><a href="#3-get和post请求区别" class="headerlink" title="3.get和post请求区别"></a><font color=red>3.get和post请求区别</font></h3><p> <font color=#0099ff>1. url可见性：</font></p>
+<pre><code>get，参数url可见；
+post，url参数不可见</code></pre><p> <font color=#0099ff>2. 数据传输上：</font></p>
+<pre><code>get，通过拼接url进行传递参数；
+post，通过body体传输参数</code></pre><p> <font color=#0099ff>3. 缓存性：</font></p>
+<pre><code>get请求是可以缓存的
+post请求不可以缓存</code></pre><p> <font color=#0099ff>4. 后退页面的反应</font></p>
+<pre><code>get请求页面后退时，不产生影响
+post请求页面后退时，会重新提交请求</code></pre><p> <font color=#0099ff>5. 传输数据的大小</font></p>
+<pre><code>get一般传输数据大小不超过2k-4k（根据浏览器不同，限制不一样，但相差不大）
+post请求传输数据的大小根据php.ini 配置文件设定，也可以无限大。</code></pre><p> <font color=#0099ff>6. 安全性</font><br>原则上post肯定要比get安全</p>
+<h3 id="4-this的指向"><a href="#4-this的指向" class="headerlink" title="4.this的指向 "></a><font color=red>4.this的指向 </font></h3><ul>
+<li>如果是<font color=#0099ff>一般函数</font>,this指向全局对象<font color=#0099ff>window</font>; </li>
+<li>在严格模式下<font color=#0099ff>“use strict”</font>,为<font color=#0099ff>undefined.</font></li>
+<li><font color=#0099ff>对象</font>的方法里调用,this指向<font color=#0099ff>调用该方法的对象.</font></li>
+<li><font color=#0099ff>构造函数</font>里的this,指向<font color=#0099ff>创建出来的实例.</font></li>
+</ul>
+<h3 id="5-普通函数和箭头函数区别"><a href="#5-普通函数和箭头函数区别" class="headerlink" title="5.普通函数和箭头函数区别"></a><font color=red>5.普通函数和箭头函数区别</font></h3><p>（1）    箭头函数是<font color=#0099ff>匿名函数</font>，不能作为构造函数，不能使用new<br>（2）    箭头函数不绑定<font color=#0099ff>arguments</font>，取而代之用rest参数…解决<br>（3）    this的<font color=#0099ff>作用域</font>不同，箭头函数不绑定this，会捕获其所在的上下文的this值，作为自己的this值。<br>（4）箭头函数没有<font color=#0099ff>原型属性</font><br>（5）箭头函数不能当做<font color=#0099ff>Generator函数</font>,不能使用yield关键字</p>
+<h3 id="6-同源策略是啥-怎么跨域-jasonp是怎么实现跨域的-他返回的是一个什么东西"><a href="#6-同源策略是啥-怎么跨域-jasonp是怎么实现跨域的-他返回的是一个什么东西" class="headerlink" title="6.同源策略是啥 ? 怎么跨域?jasonp是怎么实现跨域的 ? 他返回的是一个什么东西"></a><font color=red>6.同源策略是啥 ? 怎么跨域?jasonp是怎么实现跨域的 ? 他返回的是一个什么东西</font></h3><p><font color=#0099ff size=4>同源策略 </font>         </p>
+<p> 1.同协议<br> 2.同域名/同IP<br> 3.同端口号</p>
+<p>【注】ajax只能下载同源的数据，跨源的数据禁止下载<br><font color=#0099ff size=4>跨源的策略</font></p>
+<p>1.修改ajax同源协议（不建议）头文件加上Access-Control-Allow-Origin</p>
+<p>2.委托php文件进行跨源   php文件没有跨源限制</p>
+<p>3.jsonp</p>
+<p><font color=#0099ff size=4>JSONP跨域的使用流程</font></p>
+<p> 1.先去声明一个函数，这个函数有一个形参，这个形参会拿到我们想要下载的数据，使用这个参数进行后续数据的处理</p>
+<p> 2.在需要下载数据的时候，动态创建script标签，将标签src属性设置成下载数据的链接</p>
+<p> 3.在script插入到页面的时候，就会调用已经封装好的函数，将我们需要的数据传过来</p>
+<h3 id="7-typeof和instanceof"><a href="#7-typeof和instanceof" class="headerlink" title="7.typeof和instanceof"></a><font color=red>7.typeof和instanceof</font></h3><p><font color=#0099ff size=4>typeof </font>是判断参数是什么类型的实例，返回值为说明运算数类型的字符串。<br><font color=#0099ff size=4>instanceof</font>是用来判断一个对象在其原型链中是否存在一个构造函数的prototype属性</p>
+<p>  a instanceof b：判断a是否为b的实例，可以用于继承关系中<br>  b是c的父对象，a是c的实例，a instanceof b 与 a instanceof c 结果均为true</p>
+<h3 id="8-typeof（null）输出什么"><a href="#8-typeof（null）输出什么" class="headerlink" title="8.typeof（null）输出什么"></a><font color=red>8.typeof（null）输出什么</font></h3><p><font color=#0099ff size=4>  object</font></p>
+<h3 id="9-const一个数组，是否能够push一个数据进去，为什么能或不能"><a href="#9-const一个数组，是否能够push一个数据进去，为什么能或不能" class="headerlink" title="9.const一个数组，是否能够push一个数据进去，为什么能或不能?"></a><font color=red>9.const一个数组，是否能够push一个数据进去，为什么能或不能?</font></h3><p>splice、push可以修改const值，<font color=#0099ff size=4>能够push</font>数据进去<br>const实际上保证的，并不是变量的值不得改动，而是变量指向的那个<font color=#0099ff size=4>内存地址</font>所保存的数据<font color=#0099ff size=4>不得改动</font>。对于<font color=#0099ff size=4>简单类型的数据</font>（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此<font color=#0099ff size=4>等同于常量</font>。但对于<font color=#0099ff size=4>复合类型的数据</font>（主要是对象和数组），变量指向的<font color=#0099ff size=4>内存地址</font>，保存的只是一个指向实际数据的<font color=#0099ff size=4>指针</font>，const只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+<h3 id="10-promise一般用来做什么"><a href="#10-promise一般用来做什么" class="headerlink" title="10.promise一般用来做什么"></a><font color=red>10.promise一般用来做什么</font></h3><p><font color=#0099ff size=4>Promise</font> 是异步编程的一种解决方案：从语法上讲，promise是一个对象，从它可以获取异步操作的消息；从本意上讲，它是承诺，承诺它过一段时间会给你一个结果。<br>promise有三种状态：<font color=#0099ff size=4>pending(等待态)，fulfiled(成功态)，rejected(失败态)</font>；状态一旦改变，就不会再变。创造promise实例后，它会立即执行。<br>promise是用来解决两个问题的：<br>•    <font color=#0099ff size=4>回调地狱</font>，代码难以维护， 常常第一个的函数的输出是第二个函数的输入这种现象<br>•    promise可以支持多个<font color=#0099ff size=4>并发</font>的请求，获取并发请求中的数据<br>•    这个promise可以<font color=#0099ff size=4>解决异步</font>的问题，本身不能说promise是异步的</p>
+<h3 id="11-闭包"><a href="#11-闭包" class="headerlink" title="11.闭包"></a><font color=#0099ff>11.闭包</font></h3><pre><code>  1.函数嵌套函数
+2.内部函数使用外部函数的形参和变量
+3.被引用的形参和变量就不会被垃圾回收机制回收</code></pre><p>好处：</p>
+<ol>
+<li>希望一个变量常驻内存</li>
+<li>避免全局变量污染   避免声明全局变量</li>
+<li>可用声明私有成员</li>
+</ol>
+<h3 id="12-判断是否为数字？"><a href="#12-判断是否为数字？" class="headerlink" title="12.判断是否为数字？"></a><font color=#0099ff>12.判断是否为数字？</font></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function isNum(num) &#123;</span><br><span class="line">        return typeof num &#x3D;&#x3D;&#x3D; &quot;number&quot; &amp;&amp; !isNaN(num);</span><br><span class="line">      &#125;</span><br><span class="line">      alert(isNum(&quot; &quot;));</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function isNum(num) &#123;</span><br><span class="line">        if (parseFloat(num).toString() &#x3D;&#x3D; &quot;NaN&quot;) &#123;</span><br><span class="line">          return false;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          return true;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      alert(isNum(&quot; &quot;));</span><br><span class="line">      &#x2F;&#x2F;isNaN(val)不能判断空串或一个空格</span><br><span class="line">      &#x2F;&#x2F;如果是一个空串、空格或null，而isNaN是做为数字0进行处理的，而parseInt与parseFloat是返回一个错误消息，这个isNaN检查不严密而导致的。</span><br></pre></td></tr></table></figure>
+<h3 id="13-数组去重"><a href="#13-数组去重" class="headerlink" title="13.数组去重"></a><font color=red>13.数组去重</font></h3><p> <font color=#0099ff size=4>1.    引入库underscore-min.js</font><br> <font color=#0099ff size=4>2.    For嵌套循环for,然后用splice去重</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1];</span><br><span class="line">     for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">       for (var j &#x3D; i + 1; j &lt; arr.length; j++) &#123;</span><br><span class="line">         if (arr[i] &#x3D;&#x3D; arr[j]) &#123;</span><br><span class="line">           arr.splice(j, 1);</span><br><span class="line">           j--;</span><br><span class="line">         &#125;</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     alert(arr);</span><br></pre></td></tr></table></figure>
+<p> <font color=#0099ff size=4>3.利用sort+push</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1, 6, 8, 3, 4, 9];</span><br><span class="line">      var arr &#x3D; arr.sort();</span><br><span class="line">      var result &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (arr[i] !&#x3D;&#x3D; arr[i + 1]) &#123;</span><br><span class="line">          result.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      alert(result);</span><br></pre></td></tr></table></figure>
+<p> <font color=#0099ff size=4>4.利用indexOf去重</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1, 6, 8, 3, 4, 9];</span><br><span class="line">      var result &#x3D; [];</span><br><span class="line">      for (var i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (result.indexOf(arr[i]) &#x3D;&#x3D;&#x3D; -1) &#123;</span><br><span class="line">          result.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      alert(result);</span><br></pre></td></tr></table></figure>
+<p> <font color=#0099ff size=4>5.filter+indexOf</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1, 6, 8, 3, 4, 9];</span><br><span class="line">      function getUniqueArray() &#123;</span><br><span class="line">        var result &#x3D; arr.filter(function (item, index) &#123;</span><br><span class="line">          return arr.indexOf(item) &#x3D;&#x3D;&#x3D; index;</span><br><span class="line">        &#125;);</span><br><span class="line">        alert(result);</span><br><span class="line">      &#125;</span><br><span class="line">      getUniqueArray();</span><br></pre></td></tr></table></figure>
+<p> <font color=#0099ff size=4>6.利用ES6 set去重</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1, 6, 8, 3, 4, 9];</span><br><span class="line">     function getUniqueArray(arr) &#123;</span><br><span class="line">       return Array.from(new Set(arr));</span><br><span class="line">     &#125;</span><br><span class="line">     alert(getUniqueArray(arr));</span><br></pre></td></tr></table></figure>
+<p> <font color=#0099ff size=4>7.set</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1, 6, 8, 3, 4, 9];</span><br><span class="line">      function getUniqueArray() &#123;</span><br><span class="line">        var result &#x3D; [...new Set(arr)];</span><br><span class="line">        alert(result);</span><br><span class="line">      &#125;</span><br><span class="line">      getUniqueArray();</span><br></pre></td></tr></table></figure>
+<p> <font color=#0099ff size=4>8.reduce+include</font></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 3, 4, 5, 3, 2, 1, 1, 6, 8, 3, 4, 9];</span><br><span class="line">      function getUniqueArray() &#123;</span><br><span class="line">        var result &#x3D; arr.reduce((pre, item) &#x3D;&gt; &#123;</span><br><span class="line">          return pre.includes(item) ? pre : [...pre, item];</span><br><span class="line">        &#125;, []);</span><br><span class="line">        alert(result);</span><br><span class="line">      &#125;</span><br><span class="line">      getUniqueArray();</span><br></pre></td></tr></table></figure>
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html+css(1)/" class="archive-article-date">
-  	<time datetime="2020-05-02T15:16:30.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/02/html+css(1)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">html+css(1)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html+css(1)/">html+css(1)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/21/vue-nuxt-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-04-21T14:47:28.710Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/21/vue-nuxt-%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/">vue-nuxt-项目创建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/19/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2020-04-19T15:33:24.818Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/19/cnpm%E5%AE%89%E8%A3%85vue%E5%8F%8A%E6%90%AD%E5%BB%BAvue%E9%A1%B9%E7%9B%AE/">cnpm安装vue及搭建vue项目</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2020-04-19T07:21:56.664Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/19/gulp%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">gulp项目搭建</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/" class="archive-article-date">
-  	<time datetime="2020-04-18T14:47:02.531Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/18/%E4%BD%BF%E7%94%A8%20nvm%20%E5%AE%89%E8%A3%85%20node,nmp,cnmp/">使用 nvm 安装 node,nmp,cnmp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -355,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
