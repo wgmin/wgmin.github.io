@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/5 | wgmin的博客</title>
+  <title>html+css(2) | wgmin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wgmin的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/05/index.html">
+  <meta name="description" content="1.CSS优先级1.相同样式优先级：    当设置相同样式时，后面的优先级较高，但不建议出现重复设置样式的情况   2.内部样式与外部样式：    内部样式与外部样式优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高   3.单一样式优先级">
+<meta property="og:type" content="article">
+<meta property="og:title" content="html+css(2)">
+<meta property="og:url" content="http://yoursite.com/2020/05/06/html+css(2)/index.html">
 <meta property="og:site_name" content="wgmin的博客">
+<meta property="og:description" content="1.CSS优先级1.相同样式优先级：    当设置相同样式时，后面的优先级较高，但不建议出现重复设置样式的情况   2.内部样式与外部样式：    内部样式与外部样式优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高   3.单一样式优先级">
+<meta property="article:published_time" content="2020-05-06T15:08:31.807Z">
+<meta property="article:modified_time" content="2020-05-06T15:27:56.634Z">
 <meta property="article:author" content="wgmin">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -155,103 +159,355 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-html+css(2)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      html+css(2)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/06/html+css(2)/" class="archive-article-date">
+
+        
+        <a href="/2020/05/06/html+css(2)/" class="archive-article-date">
   	<time datetime="2020-05-06T15:08:31.807Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/html+css(2)/">html+css(2)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-CSS优先级"><a href="#1-CSS优先级" class="headerlink" title="1.CSS优先级"></a>1.CSS优先级</h3><p><strong>1.相同样式优先级：</strong> </p>
+<blockquote>
+<p> 当设置相同样式时，后面的优先级较高，但不建议出现重复设置样式的情况</p>
+</blockquote>
+<p> <strong>2.内部样式与外部样式：</strong> </p>
+<blockquote>
+<p> 内部样式与外部样式优先级相同，如果都设置了相同样式，那么后写的引入方式优先级高</p>
+</blockquote>
+<p> <strong>3.单一样式优先级</strong></p>
+<a id="more"></a>
+<blockquote>
+<p><font color=#7FFFD4>内联样式 &gt; ID 选择器 &gt; 类选择器 = 属性选择器 = 伪类选择器 &gt; 标签选择器 = 伪元素选择器&gt;通配符&gt;inherit</font></p>
+<ul>
+<li>style行间 权重 1000     </li>
+<li>id  100     </li>
+<li>类、伪类和属性选择器 10     </li>
+<li>标签选择器和伪元素选择器  1</li>
+<li>通配符、子选择器和相邻选择器，如*，&gt;，+、0</li>
+</ul>
+<p><strong>!important</strong>  提升样式优先级，非规范方式，不建议使用,没办法让继承提升</p>
+</blockquote>
+<p><strong>4.标签+类与单类</strong>  </p>
+<blockquote>
+<p><strong>标签+类&gt;单类的优先级</strong>         div.box&gt;.box</p>
+</blockquote>
+<p> <strong>5.群组优先级</strong> </p>
+<blockquote>
+<p>群组选择器与单一选择器的优先级相同，最后写的优先级高</p>
+</blockquote>
+<p><strong>6.层次优先级</strong>   建议写三层以内</p>
+<blockquote>
+<ol>
+<li><strong>权重比较</strong><br><font color=blue>ul li .box p input()</font> 1+1+10+1+1<br><font color=blue>.hello span #elem()</font>  10+1+100 更高</li>
+<li><strong>约分比较(按照相同类型约分)</strong><br><font color=blue>ul li .box p input()</font> li p input<br><font color=blue>.hello span #elem()</font>   #elem()    更高</li>
+</ol>
+</blockquote>
+<h3 id="2-CSS盒子模型"><a href="#2-CSS盒子模型" class="headerlink" title="2.CSS盒子模型"></a>2.CSS盒子模型</h3><blockquote>
+<p><font color=#B22222>组成：</font><strong>content-&gt;padding-&gt;border-&gt;margin</strong><br>            &emsp;&emsp;&emsp;&emsp;物品 &emsp;填充物&emsp;&emsp;包装盒&emsp;盒子与盒子之间的间距<br><font color=#B22222><strong>content:</strong></font> 内容区域  width和height组成<br><font color=#B22222><strong>padding:</strong></font> 内边距（内填充） padding-top/bottom/left/right<br>        &emsp;只写一个值 上下左右<br>        &emsp;两个值： 上下，左右<br>        &emsp;四个值：上右下左<br><font color=#B22222><strong>border:</strong></font> 边框<br><font color=#B22222><strong>margin：</strong> </font>外填充 两个盒子的间距 margin-top/bottom/left/right<br>        <font color=red>注意：</font><br>        &emsp;1.    背景颜色会填充到<strong>margin以内</strong>的区域<br>        &emsp;2.文字会在content区域<br>        &emsp;3.    <strong>padding不会出现负值</strong>，<strong>margin时可以出现负值的</strong><br><font color=#B22222><strong>box-sizing</strong></font>属性允许您以特定的方式定义匹配某个区域的特定元素，取值为<font color=0099ff>content-box(默认值)|border-box</font><br>    box-sizing 盒尺寸，可以改变盒子模型的<font color=red>展示形态</font><br>        <strong>content-box:</strong> width height -&gt;content<br>        <strong>border-box:</strong> width height-&gt;content padding border<br>       <font color=red>使用场景</font><br>       1.不用自己算一些值<br>        2.解决一些百分比问题(比如宽占100%，加上padding，会有滚动条，用border-box就可以解决)</p>
+</blockquote>
+<p><font size=4 color=0099ff>盒子模型的一些问题</font><br><strong>1.margin叠加 问题</strong> </p>
+<blockquote>
+<p>当给两个盒子同时添加上下外边距的时候，就会出现叠加的问题，这个问题只有上下有，左右是没有这个叠加问题的<br>    出现在上下margin同时存在的时候，会取上下值较大的作为叠加的值<br>    <strong>解决方案</strong>：<font size=4 color=0099ff>1.BFC规范 2.只给一个元素添加间距</font></p>
+</blockquote>
+<p><strong>2    margin传递问题</strong><br>只会出现在嵌套中，且只有margin-top会有传递的问题，其他三个方向是没有传递问题的<br>解决方案：<br><font size=4 color=0099ff>1.    BFC规范<br>2.    给父容器加边框<br>3.    margin换成padding(padding加在父元素)</font></p>
+<p><strong>css盒子模型扩展</strong></p>
+<blockquote>
+<p>margin左右自适应( auto)是可以的，但是上下自适应是不行的<br>    (如果向实现上下自适应的话，需要在第二部分来进行学习)<br>    margin自适应居中<br>   width height不设置的时候，对盒子模型的影响，会自动取计算容器的大小，节省代码（嵌套不出父容器）</p>
+</blockquote>
+<h3 id="4-标签分类"><a href="#4-标签分类" class="headerlink" title="4.标签分类"></a>4.标签分类</h3><p><font size=4 color=0099ff>按类型</font></p>
+<blockquote>
+<p>&emsp;<strong>block：</strong> 块  div p ul li h..<br>&emsp;<strong>inline:</strong> 内联 span a em strong img（特殊，可以设置宽高）..<br>&emsp;<strong>inline-block:</strong> 内联块 input select..</p>
+</blockquote>
+<p><strong>block:</strong></p>
+<ul>
+<li>独占一行 </li>
+<li>支持所有样式</li>
+<li>不写宽的时候，跟父元素的宽相同</li>
+</ul>
+<p><strong>line:</strong></p>
+<ul>
+<li>挨在一起的 </li>
+<li>有些样式不支持（例如width height 不支持个别margin padding样式） </li>
+<li>不写宽的时候，宽度由内容决定</li>
+<li>所占的区域不一定是矩形 内联标签之间会有空隙，原因：换行产生的</li>
+</ul>
+<p>解决空隙：在父容器中加上font-size：0,而在内联标签设置font-size：自定义文字大小px</p>
+<p><strong>inline-block:</strong></p>
+<ul>
+<li>挨在一起，支持宽高<br>注：布局一般用块标签，修饰文本一般用内联标签</li>
+</ul>
+<p><font size=4 color=0099ff>按内容</font></p>
+<blockquote>
+<p>   <strong>flow:</strong> 流内容<br>    <strong>metadata:</strong> 元数据<br>    <strong>sectioning:</strong> 分区<br>    <strong>heading:</strong> 标题<br>    <strong>phrasing:</strong> 措辞<br>    <strong>embedded:</strong> 嵌入的<br>    <strong>interactive:</strong> 互动的</p>
+</blockquote>
+<p><font size=4 color=0099ff>按显示</font> </p>
+<ol>
+<li>替换元素：浏览器根据元素的标签和属性，来决定元素的具体显示内容      img input 通过属性来显示</li>
+<li>非替换元素：将内容直接高速浏览器，将其显示出来<br>直接写标签，不用写属性</li>
+</ol>
+<h3 id="5-显示框类型"><a href="#5-显示框类型" class="headerlink" title="5.显示框类型"></a>5.显示框类型</h3><p><strong>display:</strong>  block/inline/inline-block/none<br>    显示框类型可以自行修改的</p>
+<blockquote>
+<p>display:none 不占空间的隐藏<br>  visibility:hidden 占空间的隐藏 </p>
+</blockquote>
+<h3 id="6-标签嵌套规范"><a href="#6-标签嵌套规范" class="headerlink" title="6.标签嵌套规范"></a>6.标签嵌套规范</h3><ul>
+<li><strong>ul li</strong>     </li>
+<li><strong>dl dt dd</strong>     </li>
+<li><strong>table tr td</strong></li>
+<li><strong>块标签</strong>可以嵌套<strong>内联标签</strong>  div span/a</li>
+<li>块标签<strong>不一定</strong>能嵌套块标签   div div可以  特殊：<strong>不能p嵌套div</strong></li>
+<li>内联标签<strong>不能</strong>嵌套块标签    特殊 <strong>a 可以嵌套div</strong> a可以写span,但a不能嵌套a</li>
+</ul>
+<h3 id="7-溢出隐藏"><a href="#7-溢出隐藏" class="headerlink" title="7.溢出隐藏"></a>7.溢出隐藏</h3><p>overflow : </p>
+<ul>
+<li><strong>visible:</strong> 默认(出框会显示)         </li>
+<li><strong>hidden:</strong> (出框的隐藏)</li>
+<li><strong>scroll:</strong> (内容出界，有滚动条，xy轴均有，拉动滚动条会显示)         </li>
+<li><strong>auto:</strong> (内容多的时候只有右侧有滚动条，下侧没有)</li>
+</ul>
+<blockquote>
+<p>x轴 y轴 可以设置xy轴的overflow-y:  overflow-x</p>
+</blockquote>
+<h3 id="8-透明度与手势"><a href="#8-透明度与手势" class="headerlink" title="8.透明度与手势"></a>8.透明度与手势</h3><p><font color=#B22222><strong>opacity:</strong></font> 0-1 &emsp; 0透明,占空间  &emsp;1不透明<br>    &emsp;&emsp;注：占空间，所有的子内容也会透明<br><font color=#B22222><strong>rgba  background:rgba(255,0,0,0.5)</strong></font><br>    &emsp;&emsp;最后一个是透明度,可以让<strong>背景透明</strong>，而内容不透明<br>    &emsp;&emsp;可以让指定的样式透明，而不影响其他样式<br><font color=#B22222><strong>cursor:</strong></font> 手势&emsp;&emsp; <strong>default(默认：箭头)/pointer手/move/help</strong><br>    &emsp;&emsp;还可以自定义,要实现自定义手势，准备图片: .cur  .ico<br>    &emsp;&emsp;cursor:url(./img/xxx.ico),auto;</p>
+<h3 id="9-最大、最小宽高"><a href="#9-最大、最小宽高" class="headerlink" title="9.最大、最小宽高"></a>9.最大、最小宽高</h3><blockquote>
+<p>min-width max-width<br>    max-height max-height<br>    min-width:200px 最小200，&gt;=200<br>    max-width:200px 最大200  &lt;=200</p>
+</blockquote>
+<p>%单位 ：换算-&gt;以父容器的大小进行换算，<br>如果父容器未定义，子元素定义了百分比则不显示，即使body定义了，仍然只看父容器是否定义宽高</p>
+<p>一个容器怎么<strong>适应屏幕</strong>的高：容器加height:100% body:100% html:100%</p>
+<h3 id="10-CSS默认样式："><a href="#10-CSS默认样式：" class="headerlink" title="10.CSS默认样式："></a>10.CSS默认样式：</h3><p><strong>没有默认样式</strong>：div span<br><strong>有默认样式的</strong>：body h1-h6 p ul a</p>
+<ul>
+<li><strong>body</strong>-&gt;margin:8px         </li>
+<li><strong>h1</strong> -&gt;margin:上下 21.440px font-weight:bold         </li>
+<li><strong>p</strong>-&gt;margin 上下 16px         </li>
+<li><strong>li</strong>-&gt;margin上下 16px padding:左40px</li>
+<li><strong>·</strong> 默认点：list-style:disc         </li>
+<li><strong>a</strong>-&gt;text-decoration:underline;</li>
+</ul>
+<h3 id="11-CSS-reset"><a href="#11-CSS-reset" class="headerlink" title="11.CSS reset"></a>11.CSS reset</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*&#123;margin:0px;padding:0px;&#125; &#x2F;*不用考虑哪些标签有margin和padding 稍微影响性能 *&#x2F;</span><br><span class="line">ul&#123;list-style: none;&#125;</span><br><span class="line">a&#123;text-decoration: none;color:#666;&#125;</span><br><span class="line">img&#123;display: block;&#125;&#x2F;&#x2F;问题的现象：图片跟容器底部都有一些空隙，内联元素的对齐方式是按照文字基线对齐的，而不是文字底线对齐的</span><br><span class="line">img&#123;vertical-align:bottom;&#125;解决方式是推荐的</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>写具体页面的时候或一个布局效果的时候</p>
+<ol>
+<li>写结构</li>
+<li>css重置样式</li>
+<li>写具体样式</li>
+</ol>
+<h3 id="12-float浮动"><a href="#12-float浮动" class="headerlink" title="12.float浮动"></a>12.float浮动</h3><p><font size=4 color=##0099ff>文档流</font>：是文档中可显示对象在排列时所<strong>占用的位置</strong></p>
+<blockquote>
+<p><strong>块标签</strong>：文档流从上到下<br><strong>内联</strong>: 从左到右</p>
+</blockquote>
+<p><font size=4 color=##0099ff>float特性</font>：加浮动的元素，会脱离文档流，会延迟父容器靠左或靠右排列，如果之前已经有浮动的元素，会挨着浮动的元素进行排列<br><font size=4 color=##0099ff>float</font>  <strong>left/right/none</strong><br>&emsp;&emsp;&emsp;父容器大小是正常文档流给撑开的<br><font size=4 color=##0099ff>float注意点：</font></p>
+<ol>
+<li><strong>只会影响后面的元素</strong>     </li>
+<li><strong>内容默认提升半层</strong>     </li>
+<li><strong>默认宽根据内容决定</strong>     </li>
+<li><strong>换行排列（多个浮动排列，一行放不下之后）</strong></li>
+<li><strong>主要给块元素添加，但也可以给内联元素添加</strong></li>
+</ol>
+<p><font size=4 color=##0099ff>清除浮动：</font></p>
+<ul>
+<li><strong>上下排列:</strong> clear属性，表示清除浮动的，left,right,both</li>
+<li><strong>嵌套排列</strong>：<blockquote>
+<ol>
+<li><strong>固定宽高：</strong> 不推荐，不能把高度固定死，不适合做自适应的效果</li>
+<li><strong>父元素浮动：</strong> 不推荐，因为父容器浮动也会影响到后面的元素</li>
+<li><strong>overflow：hidden</strong>(BFC规范)，如果有子元素溢出，那么会受到影响，加在父容器上</li>
+<li><strong>display：inline-block</strong>(BFC规范)，不推荐，父容器会影响到后面的元素，加在父容器上</li>
+<li><strong>设置空标签：</strong> 不推荐，会多添加一个标签</li>
+<li><strong>after伪类</strong>：推荐，是空标签的加强版，目前各大公司的做法<br>&emsp;&emsp;after伪类添加的内容是内联<br>&emsp;&emsp;(clear属性只会操作块标签，对内联标签不起作用)</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="13-position"><a href="#13-position" class="headerlink" title="13.position"></a>13.position</h3><blockquote>
+<p>position属性用于指定一个元素在文档中的定位方式。top/right/bottom/left<br>属性则决定了该元素的最终位置。</p>
+</blockquote>
+<p><font size=4 color=##0099ff>position取值：</font>static(默认)/relative/absolute/fixed/sticky<br>  <strong>relative相对定位:</strong></p>
+<blockquote>
+<ul>
+<li>如果没有定位偏移量，对元素本身没有任何影响</li>
+<li>不使元素脱离文档流  (<font size=4 color=##0099ff>占文档流</font>，空间依然存在)</li>
+<li><font size=4 color=##0099ff>不影响其他元素布局</font><br>  left top right bottom是相对于<font size=4 color=##0099ff>当前元素</font>自身进行偏移的<br>  left:10px 与right:-10px效果一样 均为向右10像素</li>
+</ul>
+</blockquote>
+<p> <strong>absolute绝对定位</strong></p>
+<blockquote>
+<ul>
+<li>使元素<font size=4 color=##0099ff>完全脱离文档流 </font></li>
+<li>使内联元素支持宽高（<strong>让内联具备块特性</strong>）     </li>
+<li>使块元素默认宽根据内容决定（<strong>让块具备内联的特性</strong>）</li>
+<li>如果有定位祖先元素相对于定位祖先元素发生偏移，没有定位祖先元素相对于整个文档发生偏移（<strong>绝对、相对、固定</strong>）</li>
+<li>父元素<strong>没有</strong>定位信息的话，<strong>以整个文档作为偏移</strong></li>
+</ul>
+</blockquote>
+<p><strong>fixed固定定位</strong></p>
+<blockquote>
+<ul>
+<li>使元素<font size=4 color=##0099ff>完全脱离文档流 </font></li>
+<li>使内联元素支持宽高（<strong>让内联具备块特性</strong>）     </li>
+<li>使块元素默认宽根据内容决定（<strong>让块具备内联的特性</strong>）</li>
+<li>相对于<font size=4 color=##0099ff>整个浏览器窗口</font>进行偏移，不受浏览器滚动条的影响</li>
+</ul>
+</blockquote>
+<p><strong>sticky粘性定位：</strong><br>    在指定的位置，进行粘性操作<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">       background-color: red;</span><br><span class="line">       position: sticky;</span><br><span class="line">       top: 0;</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure><br>    到顶部的时候，滚动条再拉动，会固定顶部不变</p>
+<p><strong>z-index定位层级</strong> </p>
+<blockquote>
+<p><strong>z-index:1</strong>;定位层级比<strong>默认0</strong>高,也可以用负值，比0层级低<br><strong>嵌套的定位层级：</strong> 比较的是先看同一层级的，如果同一层级的不写z-index,会选择子层级给外面层级进行比较</p>
+</blockquote>
+<p><strong>定位实现下拉菜单</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  *&#123;padding:0px;margin:0px;&#125;</span><br><span class="line">    ul&#123;list-style: none;&#125;</span><br><span class="line">      #menu &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        height: 30px;</span><br><span class="line">        border: 1px solid black;</span><br><span class="line">        position: relative;</span><br><span class="line">      &#125;</span><br><span class="line">      #menu ul &#123;</span><br><span class="line">        width: 100px;</span><br><span class="line">        border:1px solid black;</span><br><span class="line">        position: absolute;</span><br><span class="line">        top:30px;</span><br><span class="line">        left:-1px;</span><br><span class="line">        display: none;</span><br><span class="line">      &#125;</span><br><span class="line">      #menu:hover ul&#123;display: block;&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;menu&quot;&gt;</span><br><span class="line">        下拉菜单</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &lt;li&gt;1111&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;2222&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;3333&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;4444&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;li&gt;5555&lt;&#x2F;li&gt;</span><br><span class="line">      &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
 
+<p>实现左右居中(box2在box1内为居中位置）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">      #box1&#123;width: 300px;</span><br><span class="line">      height: <span class="number">300</span>px;</span><br><span class="line">      border: <span class="number">1</span>px solid black;</span><br><span class="line">      position: relative;&#125;</span><br><span class="line">      #box2&#123;width: 100px;</span><br><span class="line">      height: <span class="number">100</span>px;</span><br><span class="line">      background-color: red;</span><br><span class="line">      position: absolute;</span><br><span class="line">      top:<span class="number">50</span>%;left: <span class="number">50</span>%;</span><br><span class="line">      margin:<span class="number">-50</span>px <span class="number">0</span> <span class="number">0</span> <span class="number">-50</span>px;&#125;</span><br><span class="line">    &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    &lt;div id="box1"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;div id="box2"&gt;&lt;/</span>div&gt;</span><br><span class="line">    &lt;<span class="regexp">/div&gt;</span></span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/06/html+css(2)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" class="archive-article-date">
-  	<time datetime="2020-05-05T15:33:44.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS常考点(1)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/">JS常考点(1)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html+css(1)/" class="archive-article-date">
-  	<time datetime="2020-05-02T15:16:30.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html+css(1)/">html+css(1)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -274,8 +530,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
