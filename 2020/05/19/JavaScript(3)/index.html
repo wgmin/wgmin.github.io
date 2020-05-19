@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | wgmin的博客</title>
+  <title>JavaScript(3) | wgmin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wgmin的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1.事件和事件类型 事件发生必须绑定    绑定事件     &amp;emsp;1.内联模式     &amp;emsp;2.外联模式&#x2F;脚本模式(最多)绑定事件格式：元素节点.on+事件类型 &#x3D; 匿名函数            click 事件类型            onclick 事件处理函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript(3)">
+<meta property="og:url" content="http://yoursite.com/2020/05/19/JavaScript(3)/index.html">
 <meta property="og:site_name" content="wgmin的博客">
+<meta property="og:description" content="1.事件和事件类型 事件发生必须绑定    绑定事件     &amp;emsp;1.内联模式     &amp;emsp;2.外联模式&#x2F;脚本模式(最多)绑定事件格式：元素节点.on+事件类型 &#x3D; 匿名函数            click 事件类型            onclick 事件处理函数">
+<meta property="article:published_time" content="2020-05-19T12:14:09.626Z">
+<meta property="article:modified_time" content="2020-05-19T13:21:14.086Z">
 <meta property="article:author" content="wgmin">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -155,295 +159,288 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript(3)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(4)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:14:27.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(4)/">JavaScript(4)</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript(3)
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(3)/" class="archive-article-date">
+        
+        <a href="/2020/05/19/JavaScript(3)/" class="archive-article-date">
   	<time datetime="2020-05-19T12:14:09.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(3)/">JavaScript(3)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-事件和事件类型"><a href="#1-事件和事件类型" class="headerlink" title="1.事件和事件类型"></a>1.事件和事件类型</h3><blockquote>
+<p><strong>事件发生必须绑定</strong><br>    绑定事件<br>     &emsp;1.内联模式<br>     &emsp;2.外联模式/脚本模式(最多)<br><strong>绑定事件格式</strong>：<strong>元素节点.on+事件类型 = 匿名函数</strong><br>            click 事件类型<br>            onclick <strong>事件处理函数</strong><br> <a id="more"></a><br><strong>事件类型的种类</strong><br> <strong>一、鼠标事件（可以绑定任意的元素节点上)</strong></p>
+<ul>
+<li><strong>click</strong>      单击</li>
+<li><strong>dblclick</strong>   双击</li>
+<li><strong>mouseover</strong>  鼠标移入  <strong>经过子节点会重复触发</strong></li>
+<li><strong>mouseout</strong>   鼠标移出  <strong>经过子节点会重复触发</strong></li>
+<li><strong>mousemove</strong>  鼠标移动（会不停的触发）</li>
+<li><strong>mousedown</strong>  鼠标按下</li>
+<li><strong>mouseup</strong>    鼠标抬起</li>
+<li><strong>mouseenter</strong> 鼠标移入 经过子节点<strong>不会重复触发</strong> <strong>IE8以后才有</strong></li>
+<li><strong>mouseleave</strong> 鼠标移出  经过子节点<strong>不会重复触发</strong></li>
+</ul>
+</blockquote>
+<p><strong>二、键盘事件（表单元素，全局window）</strong></p>
+<blockquote>
+<ul>
+<li><strong>keydown</strong>  键盘按下（<strong>如果按下不放手，会一直触发</strong>）</li>
+<li><strong>keyup</strong>    键盘抬起</li>
+<li><strong>keypress</strong> 键盘<strong>按下</strong>（<strong>只支持字符键</strong>）</li>
+</ul>
+</blockquote>
+<p><strong>三、HTML事件</strong><br><strong>1.window事件</strong></p>
+<blockquote>
+<ul>
+<li><strong>load</strong>    当页面加载完成后会触发</li>
+<li><strong>unload</strong>  当页面<strong>解构的时候触发</strong>（刷新页面，关闭当前页面）IE浏览器兼容</li>
+<li><strong>scroll</strong>  页面滚动</li>
+<li><strong>resize</strong>  窗口大小发生变化的时候触发</li>
+</ul>
+</blockquote>
+<p><strong>2.表单事件</strong></p>
+<blockquote>
+<ul>
+<li><strong>blur</strong>    失去焦点</li>
+<li><strong>focus</strong>   获取焦点</li>
+<li><strong>select</strong>  当我们在输入框内选中文本的时候触发</li>
+<li><strong>change</strong>  当我们对<strong>输入框的文本进行修改并且失去焦点</strong>的时候<br>  【注】<strong>必须添加form元素上</strong></li>
+<li>submit  当我们点击submit上的按钮才能触发</li>
+<li>reset   当我们点击reset上的按钮才能触发    </li>
+</ul>
+</blockquote>
+<h3 id="2-事件获取方式"><a href="#2-事件获取方式" class="headerlink" title="2.事件获取方式"></a>2.事件获取方式</h3><p>固定写法 首先要<strong>获取事件</strong>，<strong>才能调用事件对象的属性</strong><br>        <strong>var e = ev ||window.event;</strong><br>事件对象：<br>&emsp;button属性<br>&emsp;&emsp;0 左键<br>&emsp;&emsp;1 滚轮<br>&emsp;&emsp;2 右键<br><strong>获取当前鼠标的位置：（原点位置不一样）</strong><br><strong>clientX clientY</strong>   原点位置：<strong>可视窗口的左上角</strong>为原点 无单位<br><strong>pageX   pageY</strong>     原点位置：<strong>整个页面的左上角</strong>为原点（包含滚出去的滚动距离）<br><strong>screenX screenY</strong>   原点位置：<strong>电脑屏幕的左上角</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onload &#x3D; function () &#123;</span><br><span class="line">            var oBtn &#x3D; document.getElementById(&quot;btn1&quot;);</span><br><span class="line">            oBtn.onclick &#x3D; function (ev) &#123;</span><br><span class="line">                var e &#x3D; ev || window.event;</span><br><span class="line">                alert(e);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-事件对象属性"><a href="#3-事件对象属性" class="headerlink" title="3.事件对象属性"></a>3.事件对象属性</h3><ul>
+<li><strong>shiftKey</strong>  按下shifit键，为true,默认为false</li>
+<li><strong>altKey</strong></li>
+<li><strong>ctrlKey</strong></li>
+<li><strong>metaKey</strong>  windows系统  按下<strong>windows(开始键)</strong> 为true<br>macos 系统   按下command 为true</li>
+</ul>
+<p><strong>[注]和别的操作进行组合，形成一些快捷键操作</strong></p>
+<p><strong>键盘事件对象</strong>  </p>
+<blockquote>
+<p>keyCode  键码<br>           which<br>             <strong>格式</strong>： <strong>var which=e.which ||e.keyCode</strong><br>              <strong>返回值</strong>：键码返回的是<strong>大写字符的ASCII值</strong>，<strong>不区分大小写</strong><br>              <strong>[注]</strong>只在<strong>Keydown</strong>下支持<br>            charCode  字符码<br>            which<br>              <strong>格式</strong>：<strong>var which=e.which||e.charCode</strong>;<br>              <strong>返回值</strong>：字符码<strong>区分大小写</strong>，返回当前按下键的ASCII值，<strong>不支持功能键</strong><br>              <strong>[注]</strong>只在<strong>keypress</strong>下支持，不支持字符串</p>
+</blockquote>
+<h3 id="4-事件冒泡和触发对象"><a href="#4-事件冒泡和触发对象" class="headerlink" title="4.事件冒泡和触发对象"></a>4.事件冒泡和触发对象</h3><blockquote>
+<p><strong>target 目标对象/触发对象  事件对象的属性</strong><br>            【注】这个事件是由谁引起的<br>            <strong>IE8以下不兼容  window.event.srcElement</strong>;<br>                 <strong>var target = e.target || window.event.srcElement;</strong><br>            this永远指向当前函数的主人</p>
+</blockquote>
+<p><strong>事件冒泡</strong> 浏览器天生带有 <strong>由里向外逐级触发</strong><br><strong>事件捕获</strong>：<strong>由外到里逐级触发</strong><br> <strong>阻止事件冒泡：浏览器兼容问题</strong><br> 事件对象的属性和方法：<br><strong>cancelBubble = true      stopPropagation()</strong><br>//封装跨浏览器兼容的<strong>阻止事件冒泡</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function stopBubble(e) &#123;</span><br><span class="line">     e.stopPropagation ? stopPropagatione() : e.stopBubble &#x3D; true;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="5-阻止默认行为和超链接"><a href="#5-阻止默认行为和超链接" class="headerlink" title="5.阻止默认行为和超链接"></a>5.阻止默认行为和超链接</h3><p>官方的右键 <strong>return false</strong>  添加方法<br>阻止超链接的默认行为：<br>    <strong>1. 简陋的阻止a链接默认行为的方式</strong><br>缺点：运行到了return 后续的内容我们就执行不到了<br>    <strong>2. 规范的方法</strong><br><strong>e.preventDefault()</strong>;<br>  <strong>window.event.returnValue = false;</strong><br>       需要兼容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function preDef(e) &#123;</span><br><span class="line">    if (e.preventDefault) &#123;</span><br><span class="line">                e.preventDefault();</span><br><span class="line">     &#125; else &#123;</span><br><span class="line">                window.event.returnValue &#x3D; false;</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="6-拖拽"><a href="#6-拖拽" class="headerlink" title="6.拖拽"></a>6.拖拽</h3><blockquote>
+<p>拖拽：（拖拽的三剑客） 伪代码（代码草稿）<br>        <strong>mousedown</strong><br>            纪录<strong>鼠标按下位置和被拖拽物体的相对距离</strong><br>            var offSetX = e.clientX - node.offsetLeft;<br>            var offSetY = e.clientY - node.offsetTop;<br>        <strong>mousemove</strong><br>            一致保持，相对距离<br>            node.style.left = e.clientX - offSetX +”px”;<br>            node.style.top =  e.clientY - offsetY +”px”;<br>        <strong>mouseup</strong><br>            取消拖拽  <strong>document.onmousemove = null</strong>;<br><strong>输出当前窗口的高</strong><br> <strong>var windowWidth = document.documentElement.clientWidth ||document.<br> body.clientWidth;</strong></p>
+</blockquote>
+<h3 id="7-事件委托"><a href="#7-事件委托" class="headerlink" title="7.事件委托"></a>7.事件委托</h3><ol>
+<li>浪费</li>
+<li>后添加的li节点没有点击事件</li>
+</ol>
+<p><strong>事件委托实现步骤</strong>：<br>          1. <strong>找到当前节点的父节点或者祖先节点</strong><br>          2. 将事件<strong>添加到你找到的父节点或者祖先节点上</strong><br>          3. <strong>找到触发对象</strong>，<strong>判断触发对象</strong>是否是想要的触发对象，<strong>进行后续操作</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">window.onload &#x3D; function () &#123;</span><br><span class="line">      var oUl &#x3D; document.getElementById(&quot;ul1&quot;);</span><br><span class="line">      oUl.onclick &#x3D; function (ev) &#123;</span><br><span class="line">                var e &#x3D; ev || window.event;</span><br><span class="line">                var target &#x3D; e.target || window.event.srcElement;</span><br><span class="line">                if (target.nodeName.toLowerCase() &#x3D;&#x3D; &#39;li&#39;) &#123;</span><br><span class="line">                    target.style.backgroundColor &#x3D; &quot;red&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">       var oBtn &#x3D; document.getElementById(&quot;btn1&quot;);</span><br><span class="line">       var i &#x3D; 6;</span><br><span class="line">       oBtn.onclick &#x3D; function () &#123;</span><br><span class="line">                var newNode &#x3D; document.createElement(&quot;li&quot;);</span><br><span class="line">                newNode.innerHTML &#x3D; i++ * 1111;</span><br><span class="line">                oUl.appendChild(newNode);</span><br><span class="line">            &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="8-事件监听器"><a href="#8-事件监听器" class="headerlink" title="8.事件监听器"></a>8.事件监听器</h3><blockquote>
+<p>1.传统事件绑定<br>(1)重复添加，覆盖<br>(2)不能精确的删除事件上的某一个函数<br>2.事件监听器(<strong>低版本不兼容</strong>) <strong>可以精确的删除添加某一个函数</strong><br>          <strong>addEventListener()</strong><br>                <strong>格式</strong>：<strong>node.addEventListener(“click”)</strong><br>                <strong>参数</strong>：<br>                    第一个参数  <strong>事件类型</strong><br>                    第二个参数  <strong>绑定函数</strong><br>                    第三个参数  布尔值  &emsp;<strong>true 事件捕获</strong> &emsp;<strong>flase 事件冒泡 默认</strong></p>
+<p><strong>removeEventListener()</strong><br>                <strong>格式</strong>：node.removeEventListener()<br>                <strong>参数</strong>：<br>                    第一个参数  <strong>事件类型</strong><br>                    第二个参数  <strong>删除函数名字</strong><br>            上两个需要和下两个兼容<br>            <strong>attachEvent(“on”+evenType,funcName);</strong><br>            <strong>detachEvent(“on”+evenType,funcName);</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function addEvent(node, evenType, funcName) &#123;</span><br><span class="line">           if (node.addEventListener) &#123;</span><br><span class="line">               node.addEventListener(evenType, funcName, false);</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               node.attachEvent(&quot;on&quot; + evenType, funcName);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">function removeEvent(node, evenType, funcName) &#123;</span><br><span class="line">           if (node.removeEventListener) &#123;</span><br><span class="line">               node.removeEventListener(evenType, funcName);</span><br><span class="line">           &#125; else &#123;</span><br><span class="line">               node.detachEvent(&quot;on&quot; + evenType, funcName);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="9-正则表达式"><a href="#9-正则表达式" class="headerlink" title="9.正则表达式"></a>9.正则表达式</h3><blockquote>
+<p>1.通过<strong>new</strong>去声明正则表达式<br>第一个参数：<strong>正则表达式的主体  字符串</strong><br>第二个参数：<strong>修饰符  i g  修饰符没有顺序</strong><br>var box1=new RegExp(“hello”,”ig”);<br>alert(box1);<br>2.<strong>省略new</strong>运算符去声明正则表达式<br>var box1=RegExp(“hello”,”ig”);<br>alert(box1);<br>3.<strong>通过常量赋值</strong><br>var box1=/hello/ig;<br>alert(box1);</p>
+<p>正则表达式对象只有两个方法<br> &emsp;<strong>test</strong><br>&emsp;&emsp;<strong>格式</strong>：<strong>正则.test()</strong><br>&emsp;&emsp;<strong>功能</strong>：在字符串中<strong>匹配这个正则是否存在</strong><br>&emsp;&emsp;<strong>返回值</strong>：如果匹配<strong>成功返回true</strong>，匹配失败返回false<br> var str = “how are you”;<br>          var box = /are/;<br>          alert(box.test(str));<br>&emsp;<strong>exec</strong><br>&emsp;&emsp;<strong>格式</strong>：<strong>正则.exec(字符串)</strong><br>&emsp;&emsp;<strong>功能</strong>：在字符串中<strong>匹配这个正则是否存在</strong><br> &emsp;&emsp;<strong>返回值</strong>：<strong>返回值匹配到的串</strong>，匹配<strong>成功</strong>，返回一个<strong>装有字符串的数组,</strong> 匹配<strong>失败</strong>，<strong>返回null</strong><br>        var str = “how are you”;<br>        var box = /are/i;<br>        alert(box.exec(str)[0]);</p>
+</blockquote>
+<p><strong>正则能使用字符串的方法</strong></p>
+<blockquote>
+<ol>
+<li><strong>match()</strong></li>
+</ol>
+<p><strong>格式</strong>：<strong>字符串.match(正则)</strong><br><strong>功能</strong>：在字符串<strong>匹配是否有符合正则表达式</strong><br><strong>返回值</strong>：匹配<strong>成功</strong>，返回装有<strong>匹配到子串的数组</strong>; 匹配<strong>失败</strong>，<strong>返回null</strong><br>2. <strong>replace()</strong><br><strong>格式</strong>：<strong>字符串.replace(oldStr/正则，newStr);</strong><br><strong>功能</strong>：用newStr将OldStr替换<br><strong>返回值</strong>：<strong>替换成功的新字符串</strong><br>3. <strong>split()</strong><br><strong>格式</strong>：<strong>字符串.splite（分隔符/正则）</strong><br><strong>功能</strong>：用<strong>分隔符将原字符串进行分割</strong><br><strong>返回值</strong>：<strong>分割剩下的子串组成的数组</strong><br>4. <strong>search()</strong><br><strong>格式</strong>：<strong>字符串.search(子串/正则)</strong><br><strong>功能</strong>：<strong>找到符合条件的子串第一次出现的位置</strong><br><strong>返回值</strong>：如果找到，返回&gt;=0的<strong>下标</strong>; 否则，返回-1<br>/* var str = “how are Are ARE you”;<br>        var arr = str.split(“are”);<br>        alert(arr); */</p>
+</blockquote>
+<p><strong>正则_元字符</strong></p>
+<blockquote>
+<p><strong>元字符</strong>：在正则表达式中<strong>有特殊含义的字符</strong><br>        单个数字和字符的原字符<br>         <strong>.</strong>            匹配<strong>单个的任意字符</strong><br>         <strong>[]</strong>           匹配<strong>单个范围内的字符</strong><br>         &emsp; <strong>[0-9]</strong><br>         &emsp; <strong>[a-zA-Z0-9]</strong>  匹配单个<strong>的数字、字母下划线</strong><br>             <strong>[^]</strong>          匹配任意一个<strong>除括号范围内的字符</strong><br>         &emsp; <strong>[^0-9]</strong>       匹配任意一个<strong>非数字字符</strong><br>         <strong>\w</strong>           匹配单个的<strong>数字、字母下划线</strong>  <strong>等价于[a-zA-Z0-9]</strong><br>         <strong>\W</strong>           匹配单个<strong>非数字、字母下划线</strong><br>         <strong>\d</strong>           匹配<strong>单个数字</strong>  等价于[0-9]<br>         <strong>\D</strong>           匹配<strong>单个非数字</strong> 等价于[^0-9]<br>            var box = /g[^0-9]ogle/<br>         <strong>重复字符  x(任意的单个字符)</strong><br>          &emsp; <strong>x? 匹配0个或者1个x</strong><br>          &emsp; <strong>x+ 匹配至少一个x字符</strong><br>          &emsp;   x* 匹配任意个x字符<br>          &emsp;  <strong>x{m,n} 匹配至少m个，最多n个字符，包括n</strong><br>          &emsp; <strong>x{n} 必须匹配n个x字符</strong><br>          &emsp;<strong>(xyz)+ 小括号括起来的部分是当作单个字符处理</strong><br>         <strong>空白字符</strong><br>        &emsp; <strong>\s 匹配任意单个的空白字符</strong><br>        &emsp; <strong>\S 匹配任意单个非空白字符</strong><br>         <strong>锚字符</strong><br>       &emsp;  <strong>^  行首匹配  必须以这个正则开头</strong><br>        &emsp; <strong>$  行尾匹配  必须以这个正则结尾</strong><br><strong>替代字符  ｜</strong><br>      &emsp;<strong>i 忽略大小写   g全局匹配    m换行匹配</strong><br><strong>转义字符</strong><br>    &emsp; . 代表本来.字符<br>     &emsp; * 代表本来是*字符<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;验证是否是正确的手机号码</span><br><span class="line">            var box&#x3D;&#x2F;^1\d&#123;10&#125;$&#x2F;;</span><br><span class="line">&#x2F;&#x2F;验证是否是正确的身份证号码</span><br><span class="line">            var box&#x3D;&#x2F;^[0-9]\d&#123;16&#125;(\d|x)$&#x2F;;</span><br><span class="line">&#x2F;&#x2F;验证字符串是否是纯中文</span><br><span class="line">            var box&#x3D;&#x2F;^[\u4e00-\u9fa5]+$&#x2F;;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="10-localStorage"><a href="#10-localStorage" class="headerlink" title="10.localStorage"></a>10.localStorage</h3><blockquote>
+<p><strong>本地存储技术</strong>：<br>       (1) <strong>localStorage(IE8以下不兼容)</strong><br>        &emsp;1. <strong>永久存储</strong><br>         &emsp;2. 最大可以存储<strong>5K</strong>  客户端的一个<strong>微型数据库</strong><br>         &emsp;3. <strong>只能存储string</strong><br>        localStorage的<strong>局限</strong><br>         &emsp;1. <strong>浏览器的大小不统一</strong>，并且在<strong>IE8以上的IE版本才支持</strong>localStorage这个属性<br>         &emsp;2. 前所有的浏览器中都会把localStorage的值类型限定为<strong>string</strong>类型，这个在对我们日常比较常见的<br>            JSON对象类型需要一些转换<br>      &emsp;3. localStorage在浏览器的<strong>隐私模式下面是不可读取的</strong><br>       &emsp;4. localStorage本质上是对字符串的读取，如果存储内容多的话<strong>会消耗内存空间</strong>，会导致页面变卡<br>      &emsp;5. localStorage <strong>不能被爬虫抓取到</strong><br>      &emsp;6. localStorage属于<strong>永久性存储</strong><br>       (2) <strong>cookie</strong><br>         &emsp;1. 可以<strong>设置过期时间</strong><br>         &emsp;2. 最大可以存<strong>4KB</strong><br>         &emsp;3. <strong>每一个域名下面最多可以存储50条数据</strong><br>      (3)  <strong>sessionStorage</strong> (<strong>结合后台使用</strong>)<br>            <strong>存储数据更小，空间更少，只能保留一次对话</strong></p>
+</blockquote>
+<p><strong>localStorage 对象</strong><br>     &emsp;<strong>setItem(name,value)</strong><br>     &emsp;<strong>getItem(name)</strong><br>     &emsp;<strong>removeItem(name)</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> if (!window.localStorage) &#123;</span><br><span class="line">      alert(&quot;当前页面不支持localStorage&quot;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      localStorage.setItem(&quot;a&quot;, &quot;1&quot;);</span><br><span class="line">      localStorage.b &#x3D; &quot;2&quot;;</span><br><span class="line">      localStorage[&quot;c&quot;] &#x3D; &quot;3&quot;;</span><br><span class="line">      alert(localStorage.getItem(&quot;b&quot;));</span><br><span class="line">      localStorage.removeItem(&quot;a&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="11-this指向"><a href="#11-this指向" class="headerlink" title="11.this指向"></a>11.this指向</h3><p>this指向<strong>当前函数的主人</strong><br><strong>每一个函数都有一个内置的变量this</strong>，this指向当前函数的主人，<strong>函数的主人要根据上下文关系进行判断</strong></p>
+<blockquote>
+<p>常见this<br>    <strong>全局函数</strong>：指向<strong>window</strong><br>    <strong>对象</strong>：指向<strong>当前对象的主人</strong><br>    <strong>事件绑定</strong>：指向<strong>当前事件</strong></p>
+</blockquote>
+<p><strong>强制类型转换</strong></p>
+<blockquote>
+<p>call 格式：<strong>函数名.call()</strong><br>       参数<br>        &emsp; 第一个参数：<strong>传入该函数this指向的对象，传入什么强制指向什么</strong><br>        &emsp; 第二个参数开始：<strong>将原函数的参数往后顺延一位</strong><br>        apply 格式：<strong>函数名.apply()</strong><br>            参数：<br>         &emsp;第一个参数：<strong>传入该函数this指向的对象，传入什么强制指向什么</strong><br>         &emsp;第二个参数：<strong>数组</strong>  数组，<strong>放入我们原有所有的参数</strong><br>         <strong>bind 预设this指向</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function show(x, y) &#123;</span><br><span class="line">           alert(this);</span><br><span class="line">           alert(x + &quot;,&quot; + y);</span><br><span class="line">       &#125;</span><br><span class="line">       &#x2F;&#x2F; show.call(&quot;call&quot;, 20, 40); &#x2F;&#x2F;call&#x2F;&#x2F;20,40</span><br><span class="line">       show.apply(&#39;apply&#39;, [20, 40]); &#x2F;&#x2F;call&#x2F;&#x2F;20,40</span><br><span class="line">		var res &#x3D; show.bind(&quot;bind&quot;);</span><br><span class="line">       &#x2F;&#x2F;alert(res);&#x2F;&#x2F;function () &#123; [native code] &#125;</span><br><span class="line">	res(40,50);&#x2F;&#x2F;bind &#x2F;&#x2F;40,50</span><br><span class="line">	&#x2F;&#x2F;简化 show.bind(“bind”)(40,50);</span><br><span class="line">	</span><br><span class="line">       &#x2F;&#x2F;Math.min(10,20,30)</span><br><span class="line">       var arr &#x3D; [10, 20, 30, 40];</span><br><span class="line">       alert(Math.min.apply(null, arr));</span><br></pre></td></tr></table></figure>
+<h3 id="12-let-const关键字"><a href="#12-let-const关键字" class="headerlink" title="12.let const关键字"></a>12.let const关键字</h3><blockquote>
+<p><strong>let</strong> 关键字是用来声明变量   更过分，只要<strong>遇到大括号就形成作用域</strong><br>            【注】let关键字声明的变量，所在作用域叫做<strong>块级作用域</strong><br>        <strong>var</strong> 关键字声明变量  将<strong>变量或者形参所在函数的大括号作为作用域</strong>处理<br>        <strong>const</strong> 声明变量，<strong>变量值只能在声明的时候确定，后续是没有办法修改的</strong><br>            【注】<strong>const声明变量</strong>  不是常量,<strong>声明变量不能改</strong>（变量没有办法改）</p>
+</blockquote>
+<h3 id="13-箭头函数"><a href="#13-箭头函数" class="headerlink" title="13.箭头函数"></a>13.箭头函数</h3><p><strong>箭头函数：新潮的函数写法</strong><br>        <strong>[注]</strong> <strong>适当的省略函数中的function和return关键字</strong></p>
+<blockquote>
+<p>箭头函数需要注意的部分<br>        1. 箭头函数，<strong>不能用new</strong><br>        2. 箭头，<strong>如果返回值是一个对象，一定要加（）</strong><br>        3. 箭头函数中的<strong>this，指向的是上一层函数的主人</strong></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;* 1.无参数无返回值 *&#x2F;</span><br><span class="line">      function show() &#123;</span><br><span class="line">        alert(&quot;hello world&quot;);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      var show &#x3D; () &#x3D;&gt; &#123;</span><br><span class="line">        alert(&quot;hello world&quot;);</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      &#x2F;* 2.有1个参数无返回值 *&#x2F;</span><br><span class="line">      function show(num) &#123;</span><br><span class="line">        alert(num);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      var show &#x3D; (num) &#x3D;&gt; &#123;</span><br><span class="line">        alert(num);</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      &#x2F;*3. 有一个参数有返回值   最有价值*&#x2F;</span><br><span class="line">      function add(x) &#123;</span><br><span class="line">        return x + 10;</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      var add &#x3D; x &#x3D;&gt; x + 10;</span><br><span class="line"></span><br><span class="line">      &#x2F;* 4.多个参数，无返回值 *&#x2F;</span><br><span class="line">      function show(x, y) &#123;</span><br><span class="line">        alert(x + y);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      var show &#x3D; (x, y) &#x3D;&gt; &#123;</span><br><span class="line">        alert(x + y);</span><br><span class="line">      &#125;;</span><br><span class="line">      </span><br><span class="line">	 var arr &#x3D; [10, 29, 49,50];</span><br><span class="line">      &#x2F;* var newArr&#x3D;arr.filter(function(item)&#123;</span><br><span class="line">            return item&gt;20;</span><br><span class="line">        &#125;) *&#x2F;</span><br><span class="line">      var newArr &#x3D; arr.filter(item &#x3D;&gt; item &gt; 20);</span><br><span class="line">	  var newArr&#x3D;arr.map(item&#x3D;&gt;item*1.3);</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/19/JavaScript(3)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(2)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:13:18.240Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/05/19/JavaScript(4)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JavaScript(4)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/19/JavaScript(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript(2)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(2)/">JavaScript(2)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(1)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:12:47.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(1)/">JavaScript(1)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/html+css(5)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:11:29.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/html+css(5)/">html+css(5)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/html+css(4)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:10:14.472Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/html+css(4)/">html+css(4)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/10/html+css(3)/" class="archive-article-date">
-  	<time datetime="2020-05-10T00:53:21.652Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/10/html+css(3)/">html+css(3)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/06/html+css(2)/" class="archive-article-date">
-  	<time datetime="2020-05-06T15:08:31.807Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/html+css(2)/">html+css(2)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" class="archive-article-date">
-  	<time datetime="2020-05-05T15:33:44.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/">JS常考点(1)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html+css(1)/" class="archive-article-date">
-  	<time datetime="2020-05-02T15:16:30.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html+css(1)/">html+css(1)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -467,8 +464,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

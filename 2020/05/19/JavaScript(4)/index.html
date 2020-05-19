@@ -6,12 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | wgmin的博客</title>
+  <title>JavaScript(4) | wgmin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="wgmin的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="1.解构中括号解构 123var[x,y,z]&#x3D;[10,20,30];alert(x+&quot;,&quot;+y);var [x,[a,b],y]&#x3D;[10,[20,30],40]; 大括号解构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript(4)">
+<meta property="og:url" content="http://yoursite.com/2020/05/19/JavaScript(4)/index.html">
 <meta property="og:site_name" content="wgmin的博客">
+<meta property="og:description" content="1.解构中括号解构 123var[x,y,z]&#x3D;[10,20,30];alert(x+&quot;,&quot;+y);var [x,[a,b],y]&#x3D;[10,[20,30],40]; 大括号解构">
+<meta property="article:published_time" content="2020-05-19T12:14:27.350Z">
+<meta property="article:modified_time" content="2020-05-19T13:27:16.315Z">
 <meta property="article:author" content="wgmin">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="js">
@@ -155,295 +159,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-JavaScript(4)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      JavaScript(4)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(4)/" class="archive-article-date">
+
+        
+        <a href="/2020/05/19/JavaScript(4)/" class="archive-article-date">
   	<time datetime="2020-05-19T12:14:27.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(4)/">JavaScript(4)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-解构"><a href="#1-解构" class="headerlink" title="1.解构"></a>1.解构</h3><p><strong>中括号解构</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var[x,y,z]&#x3D;[10,20,30];</span><br><span class="line">alert(x+&quot;,&quot;+y);</span><br><span class="line">var [x,[a,b],y]&#x3D;[10,[20,30],40];</span><br></pre></td></tr></table></figure>
+<p><strong>大括号解构</strong><br> <a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var&#123;name,age,sex&#125;&#x3D;&#123;</span><br><span class="line">    age:18,</span><br><span class="line">    name:&quot;钢铁侠&quot;，</span><br><span class="line">    sex:&#39;男&#39;</span><br><span class="line">  &#125;;</span><br><span class="line">   alert(name);</span><br><span class="line">   alert(age);</span><br><span class="line">   alert(sex);</span><br></pre></td></tr></table></figure>
+<p><strong>使用解构的好处</strong></p>
+<ol>
+<li><strong>交换两个数</strong>，比之前更加简单<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var [x, y] &#x3D; [10, 20];</span><br><span class="line">[x, y] &#x3D; [y, x];</span><br><span class="line">alert(x + &quot;,&quot; + y);&#x2F;&#x2F;20 10</span><br></pre></td></tr></table></figure></li>
+<li><strong>函数可以返回多个值</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function show() &#123;</span><br><span class="line">   return [&quot;结果1&quot;, &quot;结果2&quot;, &quot;结果3&quot;];</span><br></pre></td></tr></table></figure></li>
+<li><strong>函数定义参数，和传入参数的顺序改变</strong><br>[注]参数可以带默认值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function showSelf(&#123; name, age&#x3D;18, sex &#125;) &#123;</span><br><span class="line">             alert(&quot;我叫&quot; + name + &quot;,&quot; + &quot;今年&quot; + age + &quot;,是一位&quot; + sex + &quot;性&quot;);</span><br><span class="line">             alert(&#96;我叫$&#123;name&#125;,今年&#123;Math.max(age,20)&#125;岁,是一位$&#123;sex&#125;性&#96;);</span><br><span class="line"></span><br><span class="line">         &#125;</span><br><span class="line">         showSelf(&#123;</span><br><span class="line">             age: 18,</span><br><span class="line">             sex: &quot;男&quot;,</span><br><span class="line">             name: &quot;小明&quot;</span><br><span class="line">         &#125;)</span><br></pre></td></tr></table></figure></li>
+<li><strong>快速取出数组中的某一个元素</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [10, 20, 30, 40, 50];</span><br><span class="line">var &#123; 0: first, 4: last &#125; &#x3D; arr;</span><br><span class="line">alert(first);</span><br><span class="line">alert(last &#x3D;&#x3D; arr[4]);</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>传统字符串</strong>：所有<strong>单引号、双引号</strong>括起来的都叫做字符串<br><strong>ECMA6字符串</strong>：<strong>反引号  ``</strong></p>
+<ol>
+<li>ECMA6字符串，想怎么写怎么写，换行，代码缩进，都能在字符串中体现出来</li>
+<li>${变量/表达式/函数调用}</li>
+</ol>
+<h3 id="2-数组方法和合并对象"><a href="#2-数组方法和合并对象" class="headerlink" title="2.数组方法和合并对象"></a>2.数组方法和合并对象</h3><ul>
+<li><strong>Array.from()</strong> <strong>将伪数组转成真数组</strong></li>
+<li><strong>find()</strong>  在<strong>数组中查找符合条件的元素</strong>，只要找到<strong>第一个符合条件</strong>的元素，就终止遍历;  返回值：<strong>找到的元素</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [10, 20, 30, 40, 50];</span><br><span class="line">var res &#x3D; arr.find(function (item, index, arr) &#123;</span><br><span class="line">             return item &gt; 20;</span><br><span class="line">  &#125;)</span><br><span class="line">alert(res);</span><br></pre></td></tr></table></figure></li>
+<li><strong>findIndex()</strong> 返回值：找到的元素的<strong>下标</strong>  function (item, index, arr)</li>
+<li><strong>arr.copyWithin()</strong><br>第一个参数：<strong>从哪个下标开始</strong><br>第二个参数和第三个参数：<strong>范围[start,end)</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr &#x3D; [1, 2, 3, 4, 5, 6, 7, 8, 9];</span><br><span class="line">arr.copyWithin(2, 4, 9);</span><br><span class="line">alert(arr);&#x2F;&#x2F;1,2,5,6,7,8,9,8,9</span><br></pre></td></tr></table></figure></li>
+<li><strong>object.assign 合并对象</strong><br>【注】将所有传入的对象，都合并到第一个对象中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">      var obj1 &#x3D; &#123;</span><br><span class="line">          a: 10</span><br><span class="line">      &#125;</span><br><span class="line">      var obj2 &#x3D; &#123;</span><br><span class="line">          b: 20,</span><br><span class="line">          c: 30</span><br><span class="line">      &#125;</span><br><span class="line">      var obj3 &#x3D; &#123;</span><br><span class="line">          d: 40,</span><br><span class="line">          f: [&quot;hello&quot;, &quot;world&quot;, true]</span><br><span class="line">      &#125;</span><br><span class="line">      Object.assign(obj1, obj2, obj3);</span><br><span class="line">Console.log(obj1);&#x2F;&#x2F;合并</span><br><span class="line">      &#x2F;*  obj2.b &#x3D; 100;</span><br><span class="line">       console.log(obj2); &#x2F;&#x2F;改变100</span><br><span class="line">       console.log(obj1);&#x2F;&#x2F;不变 </span><br><span class="line">	obj3.f.push(&quot;xxx&quot;);</span><br><span class="line">      console.log(obj3);&#x2F;&#x2F;新增xxx</span><br><span class="line">      console.log(obj1);&#x2F;&#x2F;新增xxx</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+</li>
+</ul>
+<p><strong>浅拷贝</strong>：<strong>复杂的类型时，只拷贝地址</strong><br><strong>深拷贝</strong>：<strong>简单类型时，拷贝所有的</strong></p>
+<h3 id="3-新增语法集合"><a href="#3-新增语法集合" class="headerlink" title="3.新增语法集合"></a>3.新增语法集合</h3><blockquote>
+<p>集合：1.不重复  2.无序</p>
+</blockquote>
+<p> 1.Set  键和值相同<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">let imgs &#x3D; new Set();</span><br><span class="line">imgs.add(100);</span><br><span class="line">imgs.add(100);</span><br><span class="line">imgs.add(&quot;hello&quot;);</span><br><span class="line">imgs.add(&quot;hello&quot;);</span><br><span class="line">imgs.add(true);</span><br><span class="line">imgs.add(new String(&quot;world&quot;));</span><br><span class="line">imgs.add(new String(&quot;world&quot;)); &#x2F;&#x2F;都进去了，是不同对象</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;集合遍历  for..of</span><br><span class="line"></span><br><span class="line">		  for (let item of imgs.keys()) &#123;</span><br><span class="line">             console.log(item);</span><br><span class="line">         &#125; </span><br><span class="line">         </span><br><span class="line">      for (let item of imgs.values()) &#123; &#x2F;&#x2F;键值遍历</span><br><span class="line">            console.log(item);</span><br><span class="line">        &#125;  </span><br><span class="line"></span><br><span class="line">        for (let item of imgs.entries()) &#123;</span><br><span class="line">             console.log(item);</span><br><span class="line">         &#125; </span><br><span class="line">&#x2F;&#x2F;数组变集合</span><br><span class="line">        var set &#x3D; new Set([10, 20, 30, 40, 50, 40, 30, 20, 10]);</span><br><span class="line">        console.log(set); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;集合变数组  将数据结构展开成数组  也可以用Array from</span><br><span class="line">      var arr &#x3D; [...set];</span><br><span class="line">      alert(arr);</span><br></pre></td></tr></table></figure><br>2.Map</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;map 映射</span><br><span class="line">let map &#x3D; new Map();</span><br><span class="line">map.set(&quot;张三&quot;, &quot;打渔的&quot;);</span><br><span class="line">map.set(&quot;李四&quot;, &quot;种地的&quot;);</span><br><span class="line">map.set(&quot;王五&quot;, &quot;挖煤的&quot;);</span><br><span class="line">map.set(&quot;张三&quot;, &quot;打猎的&quot;);</span><br><span class="line">console.log(map);</span><br><span class="line"></span><br><span class="line"> &#x2F;&#x2F;取值</span><br><span class="line">&#x2F;* alert(map.get(&quot;王五&quot;)); *&#x2F;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;map遍历 通过 for of</span><br><span class="line"> for (let [key, value] of map) &#123;</span><br><span class="line">     console.log(key, value);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>数组遍历  for   for..in  forEach   for..of<br>对象  for..in<br>Set   for..of<br>Map   for..of</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for (var i in arr) &#123;</span><br><span class="line">        document.write(&quot;for...in循环&quot; + arr[i] + &quot;,&quot; + i + &quot;&lt;br&#x2F;&gt;&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        arr.forEach(function (item, index) &#123;</span><br><span class="line">            document.write(&quot;forEach:&quot; + item + &quot;,&quot; + index + &quot;&lt;br&#x2F;&gt;&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">for (var item of arr) &#123;</span><br><span class="line">            document.write(&quot;for..of:&quot; + item + &quot;&lt;br&#x2F;&gt;&quot;);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-面向对象"><a href="#4-面向对象" class="headerlink" title="4.面向对象"></a>4.面向对象</h3><blockquote>
+<p>1.<strong>历史</strong><br>            面向过程编程语言：汇编语言，c语言<br>            面向对象编程语言：c++ java  javascript python<br>2.<strong>思想</strong><br>            面向过程编程思想：只关心数学逻辑<br>            面向对象编程思想：<br>            &emsp;1.找出实体<br>            &emsp;2.分析实体属性和功能<br>            &emsp;3.让实体之间相互作用<br>            &emsp;4.语法<br>            &emsp; &emsp; 类：一类具有相同特征食物的抽象概念<br>             &emsp; &emsp; 对象：具体的某一个实例，唯一的某一个个体<br>             &emsp; &emsp;类   &emsp; &emsp;    对象<br>            &emsp; &emsp;电脑   &emsp;  你面前的那台<br>         &emsp;5.数据结构<br>             &emsp;基本数据类型（只能存储单个的值）=》数组（处理批量的数据）=》对象（既能存储数据，又能存储函数）</p>
+</blockquote>
+<h3 id="5-构造函数"><a href="#5-构造函数" class="headerlink" title="5.构造函数"></a>5.构造函数</h3><blockquote>
+<p>1.无new&emsp; 2.需要共有一个方法<br>如果，我们某一个函数，使用new运算符去调用<br>                1.当前函数中的this指向新创建的对象<br>                2.自动取完成1，原料和3出厂操作<br>        自动完成     this=new Object();   return obj<br>这种通过new调用函数，我们把它叫做<strong>构造函数</strong>，<strong>构造函数可以构造对象</strong><br>【注】构造函数一般情况下<strong>首字母大写</strong><br>如果创作多个类似对象，直接创建会违背编程规则，需要封装一个函数，然后封装函数的函数，然而每有一个对象，都有独有的方法，需要封装一个构造函数<br>    <strong>构造函数不是共用一个方法</strong><br><strong>prototype</strong>  原型对象  <strong>原型是一个对象</strong><br><strong>概念</strong>：每一个函数上，都有一个<strong>原型对象prototype</strong>,但是对于<strong>普通函数</strong>，<strong>原型没有用，放在构造函数对象上</strong></p>
+</blockquote>
+<p> 原型用在构造函数上，我们可以给<strong>构造函数的原型prototype</strong>，添加方法<br>            1. 如果我们将方法添加到<strong>构造函数的原型prototype对象</strong>上<br>            2. <strong>构造函数构造出来的对象共享原型上所有的方法</strong></p>
+<p><strong>原型链继承</strong><br>继承和多态同一件事的两种完全不同的侧重<br>继承：侧重是从<strong>父一级</strong>构造函数，<strong>继承到的属性和方法</strong><br>多态：侧重是，<strong>子一级</strong>，<strong>自己重写和新增的属性和方法</strong></p>
+<p>面向对象是一个编程思想  支持面向对象的思想是类（es6之前无，采用构造函数的方法）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">function Dog(&#123; name, type, age &#125;) &#123;</span><br><span class="line">            this.name &#x3D; name;</span><br><span class="line">            this.type &#x3D; type;</span><br><span class="line">            this.age &#x3D; age;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;通过构造函数的原型添加方法</span><br><span class="line">Dog.prototype &#x3D; &#123;</span><br><span class="line">       run: function () &#123;</span><br><span class="line">                alert(this.name + &#39;会飞快的奔跑&#39;);</span><br><span class="line">      &#125;,</span><br><span class="line">      showSelf: function () &#123;</span><br><span class="line">                alert(&#96;这是一个$&#123;this.type&#125;的，$&#123;this.age&#125;岁的，叫$&#123;this.name&#125;的小狗&#96;);</span><br><span class="line">      &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;分类更加细分的构造函数，继承</span><br><span class="line">function Teddy(&#123; name, type, age, color &#125;) &#123;</span><br><span class="line">  &#x2F;&#x2F;继承父一级构造函数所以的属性</span><br><span class="line">     Dog.call(this, &#123;</span><br><span class="line">          name: name,</span><br><span class="line">          type: type,</span><br><span class="line">          age: age</span><br><span class="line">    &#125;)</span><br><span class="line">    &#x2F;&#x2F;添加自己的属性</span><br><span class="line">      this.color &#x3D; color;</span><br><span class="line">   &#125;</span><br><span class="line">       </span><br><span class="line">&#x2F;&#x2F;原型链继承</span><br><span class="line"> &#x2F;&#x2F;Teddy.prototype&#x3D;Dog.prototype;非常错误的写法</span><br><span class="line">for (var funcName in Dog.prototype) &#123;</span><br><span class="line">     Teddy.prototype[funcName] &#x3D; Dog.prototype[funcName];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F;在子一级构造函数重写showSelf方法</span><br><span class="line">  &#x2F;&#x2F;只会在子一级生效，并不会影响父一级构造函数的方法</span><br><span class="line">  &#x2F;&#x2F;继承和多态同一件事的两种完全不同的侧重</span><br><span class="line">  &#x2F;&#x2F;继承：侧重是从父一级构造函数，继承到的属性和方法</span><br><span class="line">  &#x2F;&#x2F;多态：侧重是，子一级，自己重写和新增的属性和方法</span><br><span class="line">Teddy.prototype.showSelf &#x3D; function () &#123;</span><br><span class="line">    alert(&#96;这是一个$&#123;this.type&#125;的，$&#123;this.age&#125;岁的，是$&#123;this.color&#125;,$&#123;this.name&#125;的小狗&#96;);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">Teddy.prototype.showColor &#x3D; function () &#123;</span><br><span class="line">     alert(this.color);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">var xiaohong &#x3D; new Teddy(&#123;</span><br><span class="line">   name: &quot;小红&quot;,</span><br><span class="line">   type: &quot;泰迪&quot;,</span><br><span class="line">   age: 10,</span><br><span class="line">   color: &quot;红色&quot;</span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line">var xiaohei &#x3D; new Dog(&#123;</span><br><span class="line">   name: &quot;小黑&quot;,</span><br><span class="line">   type: &quot;拉布拉多&quot;,</span><br><span class="line">   age: 5</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(xiaohong.name);</span><br><span class="line">alert(xiaohong.type);</span><br><span class="line">alert(xiaohei.showColor);</span><br></pre></td></tr></table></figure>
+<p><strong>_proto_和instanceof关键字</strong><br><strong>构造函数构造出来的对象，有一个属性_proto_，指向构造出来这个对象的构造函数的原型</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alert(xiaobai.__proto__ &#x3D;&#x3D; Dog.prototype);&#x2F;&#x2F;true</span><br><span class="line">alert(xiaohei.__proto__ &#x3D;&#x3D; Dog.prototype);&#x2F;&#x2F;true</span><br><span class="line">alert(xiaobai.__proto__ &#x3D;&#x3D; xiaohei.__proto__);&#x2F;&#x2F;true</span><br></pre></td></tr></table></figure>
+<p> <strong>instanceof  关键字</strong><br> 功能：<strong>判断某一个对象是否是这个构造函数构造出来的</strong><br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">alert(xiaobai instanceof Dog);  &#x2F;&#x2F;true</span><br><span class="line">alert(xiaobai instanceof Object); &#x2F;&#x2F;true</span><br></pre></td></tr></table></figure><br>ECMA6 class语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">class Person &#123;</span><br><span class="line">    constructor(name, sex, age) &#123;</span><br><span class="line">         this.name &#x3D; name;</span><br><span class="line">         this.sex &#x3D; sex;</span><br><span class="line">         this.age &#x3D; age;</span><br><span class="line">         &#125;</span><br><span class="line">         showSelf() &#123;</span><br><span class="line">             alert(&#96;我是一个叫$&#123;this.name&#125;,今年$&#123;this.age&#125;岁的$&#123;this.sex&#125;孩&#96;);</span><br><span class="line">          &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line">   var p1 &#x3D; new Person(&quot;blue&quot;, &quot;男&quot;, &quot;10&quot;);</span><br><span class="line">   p1.showSelf();</span><br></pre></td></tr></table></figure>
+<p>原型链 继承父一级的方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 1. 通过for...in遍历继承</span><br><span class="line"></span><br><span class="line"> for (var funcName in Person.prototype) &#123;</span><br><span class="line">    Worker.prototype[funcName] &#x3D; person.prototype(funcName);</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 2. Object.create()</span><br><span class="line">  Worker.prototype &#x3D; Object.create(Person.prototype);</span><br><span class="line">  </span><br><span class="line">&#x2F;&#x2F; 3. 调用构造函数继承</span><br><span class="line">  Worker.prototype &#x3D; new Person();</span><br><span class="line">  Worker.prototype.showJob &#x3D; function () &#123;</span><br><span class="line">  alert(&quot;我的工作是&quot; + this.job);</span><br><span class="line">  &#125;</span><br><span class="line">  var w1 &#x3D; new Worker(&quot;小米&quot;, &quot;男&quot;, 20, &quot;程序员&quot;);</span><br><span class="line">  w1.showSelf();</span><br><span class="line"> w1.showJob(); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;继承</span><br><span class="line">class Worker extends Person &#123;</span><br><span class="line">      constructor(name, sex, age, job) &#123;</span><br><span class="line">         super(name, sex, age);</span><br><span class="line">            this.job &#x3D; job;</span><br><span class="line">       &#125;</span><br><span class="line">       showJob() &#123;</span><br><span class="line">           alert(&quot;我的工作是&quot; + this.job);</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  var w1 &#x3D; new Worker(&quot;小米&quot;, &quot;男&quot;, 20, &quot;程序员&quot;);</span><br><span class="line">  w1.showSelf();</span><br><span class="line">  w1.showJob();</span><br></pre></td></tr></table></figure>
+<h3 id="6-运动与游戏开发"><a href="#6-运动与游戏开发" class="headerlink" title="6.运动与游戏开发"></a>6.运动与游戏开发</h3><blockquote>
+<p>动画  图像<br>原理：能够识别的最小的时间间隔是18帧<br>动画：只需要让动画的切换时间间隔大于18帧，一般情况下电影院里面放映的电影24帧<br>简单运送：让一个div从左向右开始运动</p>
+<ol>
+<li>停不下来</li>
+<li>当速度取某些值的时候停不下来的问题</li>
+<li>到达目的值以后，点击还会继续往前运动<br>if..else将运动和停止分开</li>
+<li>重复点击按钮，速度加快<br>保证只有一个定时器<br>每次启动定时器之前，先将上一次定时器关闭</li>
+</ol>
+<p>运动框架：<br>    1. 每次启动定时器之前，先将上一次定时器关闭<br>    2. if…else将运动和停止分开</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"> window.onload &#x3D; function () &#123;</span><br><span class="line">      var oBtn &#x3D; document.getElementById(&quot;btn1&quot;);</span><br><span class="line">      var oDiv &#x3D; document.getElementById(&quot;div1&quot;);</span><br><span class="line"></span><br><span class="line">       var speed &#x3D; 7;</span><br><span class="line">       var timer &#x3D; null;</span><br><span class="line">       oBtn.onclick &#x3D; function () &#123;</span><br><span class="line">           clearInterval(timer);</span><br><span class="line">           timer &#x3D; setInterval(function () &#123;</span><br><span class="line">               if (oDiv.offsetLeft &gt;&#x3D; 500) &#123;</span><br><span class="line">                  clearInterval(timer);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    oDiv.style.left &#x3D; oDiv.offsetLeft + speed + &#39;px&#39;;</span><br><span class="line">                &#125;</span><br><span class="line">             &#125;, 30);</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/images/wx.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/19/JavaScript(4)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(3)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:14:09.626Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/19/JavaScript(3)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript(3)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(3)/">JavaScript(3)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(2)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:13:18.240Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(2)/">JavaScript(2)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/JavaScript(1)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:12:47.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/JavaScript(1)/">JavaScript(1)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/html+css(5)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:11:29.790Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/html+css(5)/">html+css(5)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/19/html+css(4)/" class="archive-article-date">
-  	<time datetime="2020-05-19T12:10:14.472Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/19/html+css(4)/">html+css(4)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/10/html+css(3)/" class="archive-article-date">
-  	<time datetime="2020-05-10T00:53:21.652Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/10/html+css(3)/">html+css(3)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/06/html+css(2)/" class="archive-article-date">
-  	<time datetime="2020-05-06T15:08:31.807Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/06/html+css(2)/">html+css(2)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/" class="archive-article-date">
-  	<time datetime="2020-05-05T15:33:44.728Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/JS%E5%B8%B8%E8%80%83%E7%82%B9(1)/">JS常考点(1)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/02/html+css(1)/" class="archive-article-date">
-  	<time datetime="2020-05-02T15:16:30.458Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/02/html+css(1)/">html+css(1)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -467,8 +405,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
